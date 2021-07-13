@@ -1,7 +1,24 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import queryString from 'query-string';
+import { Link, useHistory, useLocation } from 'react-router-dom';
+import { useForm } from '../../hooks/useForm';
 
 export const Navbar = () => {
+	const location = useLocation();
+	const { q = '' } = queryString.parse(location.search);
+
+	const history = useHistory();
+
+	const [values, handleInputChange, reset] = useForm({ name: q });
+	const { name } = values;
+
+	const handleSearch = (e) => {
+		e.preventDefault();
+		history.push('/search');
+		history.push(`?q=${name}`);
+		reset();
+	};
+
 	const [btnMenu, setbtnMenu] = useState(false);
 	const [btnSearch, setBtnSearch] = useState(false);
 
@@ -12,7 +29,6 @@ export const Navbar = () => {
 	const handleBtnSearch = () => {
 		setBtnSearch(!btnSearch);
 	};
-	console.log(btnSearch);
 	return (
 		<div className="nav__container">
 			<nav className="nav">
@@ -76,12 +92,18 @@ export const Navbar = () => {
 					</div>
 				</div>
 			</nav>
-			<form className={`nav__search ${btnSearch && 'activeSearch'}`}>
+			<form
+				onSubmit={handleSearch}
+				className={`nav__search ${btnSearch && 'activeSearch'}`}
+			>
 				<input
 					className="nav__search-input"
 					placeholder="¿Qué estas buscando?"
 					autoComplete="off"
 					type="text"
+					name="name"
+					value={name}
+					onChange={handleInputChange}
 				/>
 			</form>
 		</div>

@@ -1,11 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-export const LoginScreen = () => {
+export const LoginScreen = ({ history }) => {
+	const handleLogin = () => {
+		history.replace('/');
+	};
 	return (
 		<div>
 			<h1>LoginScreen</h1>
-			<Link to="/">Ingresar</Link>
+			<button onClick={handleLogin}>Ingresar</button>
 		</div>
 	);
 };
