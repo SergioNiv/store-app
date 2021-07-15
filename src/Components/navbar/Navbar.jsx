@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import queryString from 'query-string';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
@@ -13,11 +13,15 @@ export const Navbar = () => {
 	const [values, handleInputChange] = useForm({ name: q });
 	const { name } = values;
 
-	const filterClothes = getClothesByName(name);
+	const filterClothes = useMemo(() => getClothesByName(name), [name]);
+
 	const stringClothes = JSON.stringify(filterClothes);
 
 	const handleSearch = (e) => {
 		e.preventDefault();
+		if (name === '') {
+			return;
+		}
 		history.push(`/search/${stringClothes}`);
 		history.push(`?q=${name}`);
 	};
@@ -109,6 +113,10 @@ export const Navbar = () => {
 					onChange={handleInputChange}
 				/>
 			</form>
+
+			{name !== '' && filterClothes.length === 0 && (
+				<div>No se encontró "{name}"</div>
+			)}
 		</div>
 	);
 };

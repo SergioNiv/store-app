@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Redirect, useParams } from 'react-router-dom';
 import { getClothesById } from '../../selectors/getClothesById';
 
 export const ClothesDetails = () => {
 	const { clotId } = useParams();
-	const clothes = getClothesById(clotId);
+	const clothes = useMemo(() => getClothesById(clotId), [clotId]);
 
 	if (!clothes) {
 		return <Redirect to="/" />;
