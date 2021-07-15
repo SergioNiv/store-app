@@ -15,7 +15,7 @@ export const DashBoardRouter = () => {
 				<Switch>
 					<Route path="/home" component={HomeScreen} />
 					<Route path="/details/:clotId" component={ClothesDetails} />
-					<Route path="/search/" component={SearchScreen} />
+					<Route path="/search/:name" component={SearchScreen} />
 					<Route path="/woman" component={WomanScreen} />
 					<Route path="/man" component={ManScreen} />
 					<Redirect to="/home" />

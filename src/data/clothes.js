@@ -91,7 +91,7 @@ export const clothes = [
 	},
 	{
 		id: '006',
-		name: 'Panatalones Jogger de Mujer Celeste',
+		name: 'Pantalones Jogger de Mujer Celeste',
 		type: 'pantalones',
 		gender: 'mujer',
 		size: {
@@ -109,7 +109,7 @@ export const clothes = [
 	},
 	{
 		id: '007',
-		name: 'Panatalones Jogger de Mujer Verde',
+		name: 'Pantalones Jogger de Mujer Verde',
 		type: 'pantalones',
 		gender: 'mujer',
 		size: {
@@ -127,7 +127,7 @@ export const clothes = [
 	},
 	{
 		id: '008',
-		name: 'Panatalones Jean de Mujer Azul',
+		name: 'Pantalones Jean de Mujer Azul',
 		type: 'pantalones',
 		gender: 'mujer',
 		size: {
@@ -145,7 +145,7 @@ export const clothes = [
 	},
 	{
 		id: '009',
-		name: 'Panatalones Buzo de Mujer Negro',
+		name: 'Pantalones Buzo de Mujer Negro',
 		type: 'pantalones',
 		gender: 'mujer',
 		size: {
@@ -163,7 +163,7 @@ export const clothes = [
 	},
 	{
 		id: '010',
-		name: 'Panatalones Jogger de Mujer Café',
+		name: 'Pantalones Jogger de Mujer Café',
 		type: 'pantalones',
 		gender: 'mujer',
 		size: {
@@ -326,7 +326,7 @@ export const clothes = [
 	},
 	{
 		id: '019',
-		name: 'Panatalones Jean Hombre Celeste',
+		name: 'Pantalones Jean Hombre Celeste',
 		type: 'pantalones',
 		gender: 'hombre',
 		size: {
@@ -346,7 +346,7 @@ export const clothes = [
 	},
 	{
 		id: '020',
-		name: 'Panatalones Buzo Deportivo Hombre Azul',
+		name: 'Pantalones Buzo Deportivo Hombre Azul',
 		type: 'pantalones',
 		gender: 'hombre',
 		size: {
@@ -366,7 +366,7 @@ export const clothes = [
 	},
 	{
 		id: '021',
-		name: 'Panatalones Buzo Hombre Gris',
+		name: 'Pantalones Buzo Hombre Gris',
 		type: 'pantalones',
 		gender: 'hombre',
 		size: {
@@ -386,7 +386,7 @@ export const clothes = [
 	},
 	{
 		id: '022',
-		name: 'Panatalones Buzo Hombre Negro',
+		name: 'Pantalones Buzo Hombre Negro',
 		type: 'pantalones',
 		gender: 'hombre',
 		size: {

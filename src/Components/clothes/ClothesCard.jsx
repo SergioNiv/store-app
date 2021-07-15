@@ -5,7 +5,11 @@ export const ClothesCard = ({ id, name, price }) => {
 	return (
 		<div className="card">
 			<figure className="card__container-img">
-				<img className="card__img" src={`./assets/moda/${id}.jpg`} alt={name} />
+				<img
+					className="card__img"
+					src={`../assets/moda/${id}.jpg`}
+					alt={name}
+				/>
 			</figure>
 			<div className="card__text">
 				<span className="card__name">{name}</span>

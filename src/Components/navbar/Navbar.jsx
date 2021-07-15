@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import queryString from 'query-string';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
+import { getClothesByName } from '../../selectors/getClothesByName';
 
 export const Navbar = () => {
 	const location = useLocation();
@@ -9,14 +10,16 @@ export const Navbar = () => {
 
 	const history = useHistory();
 
-	const [values, handleInputChange, reset] = useForm({ name: q });
+	const [values, handleInputChange] = useForm({ name: q });
 	const { name } = values;
+
+	const filterClothes = getClothesByName(name);
+	const stringClothes = JSON.stringify(filterClothes);
 
 	const handleSearch = (e) => {
 		e.preventDefault();
-		history.push('/search');
+		history.push(`/search/${stringClothes}`);
 		history.push(`?q=${name}`);
-		reset();
 	};
 
 	const [btnMenu, setbtnMenu] = useState(false);
