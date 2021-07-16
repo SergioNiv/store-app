@@ -1,10 +1,11 @@
 import React from 'react';
 import { ClothesList } from '../clothes/ClothesList';
+import { FilterScreen } from './FilterScreen';
 
 export const ManScreen = () => {
 	return (
 		<div>
-			<h1>ManScreen</h1>
+			<FilterScreen />
 			<ClothesList gender="hombre" />
 		</div>
 	);

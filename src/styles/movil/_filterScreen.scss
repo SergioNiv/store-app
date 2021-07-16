@@ -1,0 +1,127 @@
+.filter {
+	width: 100%;
+	display: flex;
+
+	.filter__type {
+		width: 50%;
+
+		.type__title {
+			width: 100%;
+			height: 5rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: aqua;
+		}
+
+		.type__menu {
+			width: 50vw;
+			height: 100vh;
+			background-color: aquamarine;
+			top: 0;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			position: fixed;
+			display: none;
+			overflow: hidden;
+
+			.details__container {
+				width: 100%;
+
+				.type__menu-link {
+					width: 100%;
+					display: block;
+					height: 3rem;
+					background-color: blanchedalmond;
+					font-size: 1.4rem;
+					display: flex;
+					align-items: center;
+					padding-left: 1rem;
+					border: 1px solid black;
+				}
+				.type__submenu {
+					width: 100%;
+					list-style: none;
+					background-color: burlywood;
+					padding: 0;
+					margin: 0;
+
+					.type__submenu-link {
+						display: block;
+						width: 100%;
+						height: 3rem;
+						display: flex;
+						align-items: center;
+						font-size: 1.2rem;
+						padding-left: 1rem;
+					}
+				}
+			}
+		}
+		.activeFilterType {
+			display: block;
+		}
+	}
+
+	.filter__order {
+		width: 50%;
+
+		.order__title {
+			width: 100%;
+			height: 5rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: aqua;
+		}
+
+		.order__menu {
+			width: 50vw;
+			height: 100vh;
+			background-color: aquamarine;
+			top: 0;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			position: fixed;
+			overflow: hidden;
+			display: none;
+
+			.details__container {
+				width: 100%;
+
+				.order__menu-link {
+					width: 100%;
+					display: block;
+					height: 3rem;
+					background-color: blanchedalmond;
+					font-size: 1.4rem;
+					display: flex;
+					align-items: center;
+					padding-left: 1rem;
+				}
+				.order__submenu {
+					width: 100%;
+					list-style: none;
+					padding: 0;
+					margin: 0;
+					background-color: burlywood;
+
+					.order__submenu-link {
+						display: block;
+						width: 100%;
+						height: 3rem;
+						display: flex;
+						align-items: center;
+						font-size: 1.2rem;
+						padding-left: 1rem;
+					}
+				}
+			}
+		}
+		.activeFilterType {
+			display: block;
+		}
+	}
+}
