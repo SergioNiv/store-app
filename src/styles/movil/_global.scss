@@ -1,3 +1,17 @@
+$red-off: #f93449;
+$white-off: #f9f9f9;
+$primary-font: 'Nunito', sans-serif;
+$black-soft: #aaa;
+$black: #444;
+
 html {
 	font-size: 62.5%;
+}
+
+body {
+	background-color: $white-off;
+	font-family: $primary-font;
+	font-weight: 400;
+	min-width: 320px;
+	color: $black;
 }

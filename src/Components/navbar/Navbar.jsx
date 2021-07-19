@@ -40,13 +40,19 @@ export const Navbar = () => {
 		<div className="nav__container">
 			<nav className="nav">
 				<figure className="nav__logo">
-					<img src="#" alt="" />
+					<Link to="/">
+						<img
+							src="../assets/logos/logo-white2.png"
+							alt="Logo"
+							className="nav__logo-img"
+						/>
+					</Link>
 				</figure>
 				<button onClick={handleBtnSearch} className="nav__btn-search">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						width="16"
-						height="16"
+						width="22"
+						height="22"
 						fill="currentColor"
 						className="bi bi-search"
 						viewBox="0 0 16 16"
@@ -58,8 +64,8 @@ export const Navbar = () => {
 				<Link to="/login" className="nav__login">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						width="16"
-						height="16"
+						width="22"
+						height="22"
 						fill="currentColor"
 						className="bi bi-door-open"
 						viewBox="0 0 16 16"
@@ -72,8 +78,8 @@ export const Navbar = () => {
 				<button className="nav__btn-store">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						width="16"
-						height="16"
+						width="22"
+						height="22"
 						fill="currentColor"
 						className="bi bi-cart3"
 						viewBox="0 0 16 16"
@@ -90,10 +96,16 @@ export const Navbar = () => {
 							to="/woman"
 							onClick={handleBtnMenu}
 							className="nav__menu-link"
+							style={{ textDecoration: 'none' }}
 						>
 							Moda mujer
 						</Link>
-						<Link to="/man" onClick={handleBtnMenu} className="nav__menu-link">
+						<Link
+							to="/man"
+							onClick={handleBtnMenu}
+							className="nav__menu-link radius--bottom "
+							style={{ textDecoration: 'none' }}
+						>
 							Moda hombre
 						</Link>
 					</div>
@@ -115,7 +127,7 @@ export const Navbar = () => {
 			</form>
 
 			{name !== '' && filterClothes.length === 0 && (
-				<div>No se encontró "{name}"</div>
+				<div className="search__alert">No se encontró "{name}"</div>
 			)}
 		</div>
 	);
