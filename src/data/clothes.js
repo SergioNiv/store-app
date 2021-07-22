@@ -17,7 +17,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Blusa',
+				typec: 'Blusa',
 				color: 'Turquesa',
 			},
 		],
@@ -40,7 +40,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Blusa',
+				typec: 'Blusa',
 				color: 'Negro',
 			},
 		],
@@ -63,7 +63,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Blusa',
+				typec: 'Blusa',
 				color: 'Amarillo',
 			},
 		],
@@ -86,7 +86,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Blusa',
+				typec: 'Blusa',
 				color: 'Negro',
 			},
 		],
@@ -109,7 +109,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Blusa',
+				typec: 'Blusa',
 				color: 'Blanco',
 			},
 		],
@@ -132,7 +132,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Jogger',
+				typec: 'Jogger',
 				color: 'Celeste',
 			},
 		],
@@ -155,7 +155,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Jogger',
+				typec: 'Jogger',
 				color: 'Verde',
 			},
 		],
@@ -178,7 +178,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Jean',
+				typec: 'Jean',
 				color: 'Azul',
 			},
 		],
@@ -201,7 +201,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Buzo',
+				typec: 'Buzo',
 				color: 'Negro',
 			},
 		],
@@ -224,7 +224,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Jogger',
+				typec: 'Jogger',
 				color: 'Café',
 			},
 		],
@@ -247,7 +247,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Polo',
+				typec: 'Polo',
 				color: 'Turquesa',
 			},
 		],
@@ -270,7 +270,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Polo',
+				typec: 'Polo',
 				color: 'Azul',
 			},
 		],
@@ -293,7 +293,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Polo',
+				typec: 'Polo',
 				color: 'Blanco',
 			},
 		],
@@ -316,7 +316,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Polo',
+				typec: 'Polo',
 				color: 'Blanco',
 			},
 		],
@@ -339,7 +339,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Polo',
+				typec: 'Polo',
 				color: 'Azul',
 			},
 		],
@@ -363,7 +363,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Sueter',
+				typec: 'Sueter',
 				color: 'Marrón',
 			},
 		],
@@ -386,7 +386,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Sueter',
+				typec: 'Sueter',
 				color: 'Gris',
 			},
 		],
@@ -409,7 +409,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Sueter',
+				typec: 'Sueter',
 				color: 'Verde',
 			},
 		],
@@ -433,7 +433,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Jean',
+				typec: 'Jean',
 				color: 'Celeste',
 			},
 		],
@@ -456,7 +456,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Buzo',
+				typec: 'Buzo',
 				color: 'Azul',
 			},
 		],
@@ -479,7 +479,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Buzo',
+				typec: 'Buzo',
 				color: 'Gris',
 			},
 		],
@@ -502,7 +502,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Buzo',
+				typec: 'Buzo',
 				color: 'Negro',
 			},
 		],
@@ -525,7 +525,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Polo',
+				typec: 'Polo',
 				color: 'Rojo',
 			},
 		],
@@ -548,7 +548,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Polo',
+				typec: 'Polo',
 				color: 'Azul',
 			},
 		],
@@ -571,7 +571,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Polo',
+				typec: 'Polo',
 				color: 'Azul',
 			},
 		],
@@ -594,7 +594,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				type: 'Polo',
+				typec: 'Polo',
 				color: 'Piel',
 			},
 		],
