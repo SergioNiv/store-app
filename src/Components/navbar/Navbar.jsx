@@ -3,7 +3,7 @@ import queryString from 'query-string';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
 import { getClothesByName } from '../../selectors/getClothesByName';
-import { User } from './User';
+
 import { NavLogout } from './NavLogout';
 
 export const Navbar = () => {
@@ -101,8 +101,6 @@ export const Navbar = () => {
 					</div>
 				</div>
 			</nav>
-
-			<User />
 
 			<form
 				onSubmit={handleSearch}

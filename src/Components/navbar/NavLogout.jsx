@@ -1,16 +1,8 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../auth/AuthContext';
-import { types } from '../../type/types';
 
 export const NavLogout = () => {
-	const { dispatch } = useContext(AuthContext);
-
-	const handleLogout = () => {
-		dispatch({
-			type: types.logout,
-		});
-	};
+	const handleLogout = () => {};
 	return (
 		<Link to="/login" className="nav__login" onClick={handleLogout}>
 			<svg
