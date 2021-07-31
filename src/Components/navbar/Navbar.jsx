@@ -5,8 +5,12 @@ import { useForm } from '../../hooks/useForm';
 import { getClothesByName } from '../../selectors/getClothesByName';
 
 import { NavLogout } from './NavLogout';
+import { useSelector } from 'react-redux';
 
 export const Navbar = () => {
+	const { isLoggedIn, name: displayName } = useSelector((state) => state.ui);
+	console.log(isLoggedIn, displayName);
+
 	const location = useLocation();
 	const { q = '' } = queryString.parse(location.search);
 
@@ -101,7 +105,7 @@ export const Navbar = () => {
 					</div>
 				</div>
 			</nav>
-
+			{displayName && <div style={{ color: 'white' }}>Hola {displayName}</div>}
 			<form
 				onSubmit={handleSearch}
 				className={`nav__search ${btnSearch && 'activeSearch'}`}

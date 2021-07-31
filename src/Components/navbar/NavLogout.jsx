@@ -1,10 +1,15 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { Startlogout } from '../../actions/auth';
 
 export const NavLogout = () => {
-	const handleLogout = () => {};
+	const dispatch = useDispatch();
+	const handleLogout = () => {
+		dispatch(Startlogout());
+	};
 	return (
-		<Link to="/login" className="nav__login" onClick={handleLogout}>
+		<Link to="/auth/login" className="nav__login" onClick={handleLogout}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="22"

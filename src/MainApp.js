@@ -2,11 +2,15 @@ import React from 'react';
 import './styles/normalize.css';
 import './styles/movil/moviles.scss';
 import { RouterApp } from './routers/RouterApp';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
 
 export const MainApp = () => {
 	return (
 		<>
-			<RouterApp />
+			<Provider store={store}>
+				<RouterApp />
+			</Provider>
 		</>
 	);
 };
