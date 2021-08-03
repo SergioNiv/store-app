@@ -6,4 +6,5 @@ export const types = {
 	uiStartLoading: '[UI] start loading',
 	uiFinishLoading: '[UI] finish loading',
 	uiIsLoggedIn: '[UI] is logged in',
+	uiIsLoggedEnd: '[UI] is logged end',
 };

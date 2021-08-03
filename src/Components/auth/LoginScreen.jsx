@@ -6,13 +6,14 @@ import {
 	startGoogleLogin,
 	startLoginWithEmailPassword,
 } from '../../actions/auth';
+
 import { useForm } from '../../hooks/useForm';
 
 export const LoginScreen = ({ history }) => {
 	const dispatch = useDispatch();
 
-	const { loading } = useSelector((state) => state.ui);
-
+	const { loading, isLoggedIn } = useSelector((state) => state.ui);
+	console.log(isLoggedIn);
 	const [formValues, handleInputChange] = useForm({
 		email: 'nando@gmail.com',
 		password: '123456',
@@ -22,7 +23,6 @@ export const LoginScreen = ({ history }) => {
 
 	const handleLogin = (e) => {
 		e.preventDefault();
-		// history.push('/');
 		dispatch(startLoginWithEmailPassword(email, password));
 	};
 

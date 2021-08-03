@@ -34,6 +34,12 @@ export const uiReducer = (state = { initialState }, action) => {
 				isLoggedIn: true,
 				name: action.payload,
 			};
+		case types.uiIsLoggedEnd:
+			return {
+				...state,
+				isLoggedIn: false,
+				name: null,
+			};
 
 		default:
 			return state;

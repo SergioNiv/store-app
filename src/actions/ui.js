@@ -21,3 +21,7 @@ export const isLoggedIn = (name) => ({
 	type: types.uiIsLoggedIn,
 	payload: name,
 });
+export const isLoggedEnd = (name) => ({
+	type: types.uiIsLoggedEnd,
+	payload: name,
+});

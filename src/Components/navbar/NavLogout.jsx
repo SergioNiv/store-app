@@ -2,11 +2,13 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Startlogout } from '../../actions/auth';
+import { isLoggedEnd } from '../../actions/ui';
 
 export const NavLogout = () => {
 	const dispatch = useDispatch();
 	const handleLogout = () => {
 		dispatch(Startlogout());
+		dispatch(isLoggedEnd());
 	};
 	return (
 		<Link to="/auth/login" className="nav__login" onClick={handleLogout}>
