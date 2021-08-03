@@ -8,8 +8,7 @@ import { NavLogout } from './NavLogout';
 import { useSelector } from 'react-redux';
 
 export const Navbar = () => {
-	const { isLoggedIn, name: displayName } = useSelector((state) => state.ui);
-	console.log(isLoggedIn, displayName);
+	const { name: displayName } = useSelector((state) => state.ui);
 
 	const location = useLocation();
 	const { q = '' } = queryString.parse(location.search);
@@ -25,7 +24,7 @@ export const Navbar = () => {
 
 	const handleSearch = (e) => {
 		e.preventDefault();
-		if (name === '') {
+		if (name.trim().length < 1) {
 			return;
 		}
 		history.push(`/search/${stringClothes}`);

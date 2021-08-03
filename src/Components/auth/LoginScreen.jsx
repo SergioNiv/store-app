@@ -12,8 +12,10 @@ import { useForm } from '../../hooks/useForm';
 export const LoginScreen = ({ history }) => {
 	const dispatch = useDispatch();
 
-	const { loading, isLoggedIn } = useSelector((state) => state.ui);
-	console.log(isLoggedIn);
+	const { auth, ui } = useSelector((state) => state);
+	const { name } = auth;
+	const { loading, isLoggedIn } = ui;
+
 	const [formValues, handleInputChange] = useForm({
 		email: 'nando@gmail.com',
 		password: '123456',
@@ -24,6 +26,9 @@ export const LoginScreen = ({ history }) => {
 	const handleLogin = (e) => {
 		e.preventDefault();
 		dispatch(startLoginWithEmailPassword(email, password));
+		if (isLoggedIn) {
+			history.push('/');
+		}
 	};
 
 	const handleGoogleLogin = () => {
@@ -53,7 +58,11 @@ export const LoginScreen = ({ history }) => {
 					value={password}
 					onChange={handleInputChange}
 				/>
-
+				{isLoggedIn ? (
+					<div style={{ textAlign: 'center' }}>
+						Hola {name} toca nuevamente para ingresar
+					</div>
+				) : null}
 				<button type="submit" className="btn" disabled={loading}>
 					Login
 				</button>
