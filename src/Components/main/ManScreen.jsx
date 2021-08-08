@@ -6,7 +6,7 @@ export const ManScreen = () => {
 	return (
 		<div>
 			<FilterScreen />
-			<ClothesList gender="hombre" />
+			<ClothesList />
 		</div>
 	);
 };

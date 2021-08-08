@@ -5,9 +5,11 @@ import { useForm } from '../../hooks/useForm';
 import { getClothesByName } from '../../selectors/getClothesByName';
 
 import { NavLogout } from './NavLogout';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { filterClothesByGender } from '../../actions/filter';
 
 export const Navbar = () => {
+	const dispatch = useDispatch();
 	const { name: displayName } = useSelector((state) => state.ui);
 
 	const location = useLocation();
@@ -31,16 +33,24 @@ export const Navbar = () => {
 		history.push(`?q=${name}`);
 	};
 
-	const [btnMenu, setbtnMenu] = useState(false);
+	const [btnMenu, setBtnMenu] = useState(false);
 	const [btnSearch, setBtnSearch] = useState(false);
+	const [gender, setGender] = useState('');
 
-	const handleBtnMenu = () => {
-		setbtnMenu(!btnMenu);
+	const handleBtnMan = () => {
+		setBtnMenu(!btnMenu);
+		setGender('hombre');
+		dispatch(filterClothesByGender('hombre'));
 	};
 
-	const handleBtnSearch = () => {
-		setBtnSearch(!btnSearch);
+	const handleBtnWoman = () => {
+		setBtnMenu(!btnMenu);
+		setGender('mujer');
+		dispatch(filterClothesByGender('mujer'));
 	};
+
+	const handleBtnSearch = () => setBtnSearch(!btnSearch);
+	const handleBtnMenu = () => setBtnMenu(!btnMenu);
 	return (
 		<div className="nav__container">
 			<nav className="nav">
@@ -87,7 +97,7 @@ export const Navbar = () => {
 					<div className={`nav__menu ${btnMenu && 'activeMenu'}`}>
 						<Link
 							to="/woman"
-							onClick={handleBtnMenu}
+							onClick={handleBtnWoman}
 							className="nav__menu-link"
 							style={{ textDecoration: 'none' }}
 						>
@@ -95,7 +105,7 @@ export const Navbar = () => {
 						</Link>
 						<Link
 							to="/man"
-							onClick={handleBtnMenu}
+							onClick={handleBtnMan}
 							className="nav__menu-link radius--bottom "
 							style={{ textDecoration: 'none' }}
 						>

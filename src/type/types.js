@@ -7,4 +7,8 @@ export const types = {
 	uiFinishLoading: '[UI] finish loading',
 	uiIsLoggedIn: '[UI] is logged in',
 	uiIsLoggedEnd: '[UI] is logged end',
+
+	filterBygender: '[filter] get clothes by gender ',
+	filterLogoutCleaning: '[filter] clothes logout cleaning ',
+	filterByType: '[filter] get clothes by type',
 };

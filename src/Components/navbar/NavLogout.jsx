@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Startlogout } from '../../actions/auth';
+import { clothesLogoutCleaning } from '../../actions/filter';
 import { isLoggedEnd } from '../../actions/ui';
 
 export const NavLogout = () => {
@@ -9,6 +10,7 @@ export const NavLogout = () => {
 	const handleLogout = () => {
 		dispatch(Startlogout());
 		dispatch(isLoggedEnd());
+		dispatch(clothesLogoutCleaning());
 	};
 	return (
 		<Link to="/auth/login" className="nav__login" onClick={handleLogout}>

@@ -1,9 +1,10 @@
-import React, { useMemo } from 'react';
-import { getClothesByGender } from '../../selectors/getClothesByGender';
+import React from 'react';
+import { useSelector } from 'react-redux';
+
 import { ClothesCard } from './ClothesCard';
 
-export const ClothesList = ({ gender }) => {
-	const clothes = useMemo(() => getClothesByGender(gender), [gender]);
+export const ClothesList = () => {
+	const { clothes } = useSelector((state) => state.filter);
 
 	return (
 		<div className="grid__container">
