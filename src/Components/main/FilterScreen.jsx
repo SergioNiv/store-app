@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+	filterClothesByColor,
+	filterClothesByType,
+} from '../../actions/filter';
 
 export const FilterScreen = () => {
+	const dispatch = useDispatch();
+	const { gender } = useSelector((state) => state.filter);
+
 	const [filterState, setFilterState] = useState(false);
 	const [orderState, setOrderState] = useState(false);
 
@@ -17,32 +25,126 @@ export const FilterScreen = () => {
 					<button onClick={handleActiveFilter} className="btn__back">
 						Atrás
 					</button>
-					<details className="details__container">
+					<details className="details__container" open>
 						<summary className="type__menu-link">Tipo</summary>
 						<ul className="type__submenu">
-							<li className="type__submenu-link">Polos</li>
-							<li className="type__submenu-link">Sueter</li>
-							<li className="type__submenu-link">Pantalón</li>
-							<li className="type__submenu-link">Blusa</li>
+							<li
+								className="type__submenu-link"
+								onClick={() => dispatch(filterClothesByType('polo', gender))}
+							>
+								Polo
+							</li>
+							<li
+								className="type__submenu-link"
+								onClick={() => dispatch(filterClothesByType('sueter', gender))}
+							>
+								Sueter
+							</li>
+							<li
+								className="type__submenu-link"
+								onClick={() =>
+									dispatch(filterClothesByType('pantalones', gender))
+								}
+							>
+								Pantalón
+							</li>
+							{gender === 'mujer' ? (
+								<li
+									className="type__submenu-link"
+									onClick={() =>
+										dispatch(filterClothesByType('blusas', gender))
+									}
+								>
+									Blusa
+								</li>
+							) : (
+								<li
+									className="type__submenu-link"
+									onClick={() =>
+										dispatch(filterClothesByType('blusas', gender))
+									}
+								>
+									Camisa
+								</li>
+							)}
 						</ul>
 					</details>
-					<details className="details__container">
-						<summary className="type__menu-link">Talla</summary>
-						<ul className="type__submenu">
-							<li className="type__submenu-link">S</li>
-							<li className="type__submenu-link">M</li>
-							<li className="type__submenu-link">L</li>
-							<li className="type__submenu-link">XL</li>
-						</ul>
-					</details>
-					<details className="details__container">
+
+					<details className="details__container" open>
 						<summary className="type__menu-link">Color</summary>
 						<ul className="type__submenu">
-							<li className="type__submenu-link">Rojo</li>
-							<li className="type__submenu-link">Negro</li>
-							<li className="type__submenu-link">Azúl</li>
-							<li className="type__submenu-link">Verde</li>
-							<li className="type__submenu-link">Amarillo</li>
+							<li
+								className="type__submenu-link"
+								onClick={() => dispatch(filterClothesByColor('Negro', gender))}
+							>
+								Negro
+							</li>
+							<li
+								className="type__submenu-link"
+								onClick={() =>
+									dispatch(filterClothesByColor('Turquesa', gender))
+								}
+							>
+								Turquesa
+							</li>
+							<li
+								className="type__submenu-link"
+								onClick={() =>
+									dispatch(filterClothesByColor('Amarillo', gender))
+								}
+							>
+								Amarillo
+							</li>
+							<li
+								className="type__submenu-link"
+								onClick={() => dispatch(filterClothesByColor('Blanco', gender))}
+							>
+								Blanco
+							</li>
+							<li
+								className="type__submenu-link"
+								onClick={() =>
+									dispatch(filterClothesByColor('Celeste', gender))
+								}
+							>
+								Celeste
+							</li>
+							<li
+								className="type__submenu-link"
+								onClick={() => dispatch(filterClothesByColor('Verde', gender))}
+							>
+								Verde
+							</li>
+							<li
+								className="type__submenu-link"
+								onClick={() => dispatch(filterClothesByColor('Azul', gender))}
+							>
+								Azul
+							</li>
+							<li
+								className="type__submenu-link"
+								onClick={() => dispatch(filterClothesByColor('Café', gender))}
+							>
+								Café
+							</li>
+							<li
+								className="type__submenu-link"
+								onClick={() => dispatch(filterClothesByColor('Gris', gender))}
+							>
+								Gris
+							</li>
+							<li
+								className="type__submenu-link"
+								onClick={() => dispatch(filterClothesByColor('Rojo', gender))}
+							>
+								Rojo
+							</li>
+							<li
+								className="type__submenu-link"
+								onClick={() => dispatch(filterClothesByColor('Piel', gender))}
+							>
+								Piel
+							</li>
 						</ul>
 					</details>
 				</ul>

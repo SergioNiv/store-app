@@ -11,4 +11,5 @@ export const types = {
 	filterBygender: '[filter] get clothes by gender ',
 	filterLogoutCleaning: '[filter] clothes logout cleaning ',
 	filterByType: '[filter] get clothes by type',
+	filterByColor: '[filter] get clothes by color',
 };

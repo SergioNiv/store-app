@@ -36,7 +36,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 49.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -59,7 +59,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 29.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -82,7 +82,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 45.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -105,7 +105,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 69.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -128,7 +128,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 89.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -151,7 +151,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 99.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -174,7 +174,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 79.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -197,7 +197,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 79.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -220,7 +220,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 69.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -266,7 +266,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 29.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -289,7 +289,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 24.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -312,7 +312,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 34.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -335,7 +335,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 34.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -359,12 +359,12 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 49.9,
 		characters: [
 			{
 				material: 'Algodón',
 				typec: 'Sueter',
-				color: 'Marrón',
+				color: 'Café',
 			},
 		],
 	},
@@ -382,7 +382,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 49.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -405,7 +405,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 59.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -429,7 +429,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 99.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -452,7 +452,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 89.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -475,7 +475,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 89.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -498,7 +498,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 69.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -521,7 +521,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 29.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -544,7 +544,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 29.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -567,7 +567,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 19.9,
 		characters: [
 			{
 				material: 'Algodón',
@@ -590,7 +590,7 @@ export const clothes = [
 				XXL36: 2,
 			},
 		],
-		price: 39.9,
+		price: 29.9,
 		characters: [
 			{
 				material: 'Algodón',

@@ -1,13 +1,13 @@
-import { useSelector } from 'react-redux';
+import { getClothesByGender } from './getClothesByGender';
 
-export const getClothesByType = (type) => {
-	const { clothes } = useSelector((state) => state.filter);
+export const getClothesByType = (type, gender) => {
+	const clothes = getClothesByGender(gender);
 
-	const validGener = ['mujer', 'hombre'];
+	const validType = ['blusas', 'pantalones', 'polo', 'sueter', null];
 
-	if (!validGener.includes(type)) {
+	if (!validType.includes(type)) {
 		throw new Error(`Gender "${type}" no es correcto`);
 	}
 
-	return clothes.filter((clothes) => clothes.gender === type);
+	return clothes.filter((clothes) => clothes.type === type);
 };

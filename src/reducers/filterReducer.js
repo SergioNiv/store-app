@@ -2,6 +2,7 @@ import { types } from '../type/types';
 
 const initialstate = {
 	clothes: [],
+	gender: null,
 };
 
 export const filterReducer = (state = initialstate, action) => {
@@ -9,12 +10,23 @@ export const filterReducer = (state = initialstate, action) => {
 		case types.filterBygender:
 			return {
 				...state,
+				clothes: action.payload.clothes,
+				gender: action.payload.gender,
+			};
+
+		case types.filterByType:
+			return {
+				...state,
+				clothes: action.payload,
+			};
+
+		case types.filterByColor:
+			return {
+				...state,
 				clothes: action.payload,
 			};
 		case types.filterLogoutCleaning:
-			return {
-				clothes: [],
-			};
+			return initialstate;
 		default:
 			return state;
 	}

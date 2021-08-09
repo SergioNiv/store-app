@@ -35,17 +35,14 @@ export const Navbar = () => {
 
 	const [btnMenu, setBtnMenu] = useState(false);
 	const [btnSearch, setBtnSearch] = useState(false);
-	const [gender, setGender] = useState('');
 
 	const handleBtnMan = () => {
 		setBtnMenu(!btnMenu);
-		setGender('hombre');
 		dispatch(filterClothesByGender('hombre'));
 	};
 
 	const handleBtnWoman = () => {
 		setBtnMenu(!btnMenu);
-		setGender('mujer');
 		dispatch(filterClothesByGender('mujer'));
 	};
 
