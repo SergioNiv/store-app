@@ -6,7 +6,7 @@ export const getClothesByType = (type, gender) => {
 	const validType = ['blusas', 'pantalones', 'polo', 'sueter', null];
 
 	if (!validType.includes(type)) {
-		throw new Error(`Gender "${type}" no es correcto`);
+		throw new Error(`Type "${type}" no es correcto`);
 	}
 
 	return clothes.filter((clothes) => clothes.type === type);

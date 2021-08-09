@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
 	filterClothesByColor,
+	filterClothesByPrice,
 	filterClothesByType,
 } from '../../actions/filter';
 
@@ -160,8 +161,22 @@ export const FilterScreen = () => {
 					<details className="details__container" open>
 						<summary className="order__menu-link">Por precio</summary>
 						<ul className="order__submenu">
-							<li className="order__submenu-link">Ascendente</li>
-							<li className="order__submenu-link">Descendente</li>
+							<li
+								className="order__submenu-link"
+								onClick={() =>
+									dispatch(filterClothesByPrice('ascendente', gender))
+								}
+							>
+								Ascendente
+							</li>
+							<li
+								className="order__submenu-link"
+								onClick={() =>
+									dispatch(filterClothesByPrice('descendente', gender))
+								}
+							>
+								Descendente
+							</li>
 						</ul>
 					</details>
 				</ul>

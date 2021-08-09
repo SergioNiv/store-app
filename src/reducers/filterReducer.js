@@ -13,14 +13,17 @@ export const filterReducer = (state = initialstate, action) => {
 				clothes: action.payload.clothes,
 				gender: action.payload.gender,
 			};
-
 		case types.filterByType:
 			return {
 				...state,
 				clothes: action.payload,
 			};
-
 		case types.filterByColor:
+			return {
+				...state,
+				clothes: action.payload,
+			};
+		case types.filterByPrice:
 			return {
 				...state,
 				clothes: action.payload,

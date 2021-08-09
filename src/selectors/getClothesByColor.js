@@ -19,7 +19,7 @@ export const getClothesByColor = (color, gender) => {
 	];
 
 	if (!validType.includes(color)) {
-		throw new Error(`Gender "${color}" no es correcto`);
+		throw new Error(`Color "${color}" no es correcto`);
 	}
 
 	return clothes.filter((clothes) => clothes.characters[0].color === color);
