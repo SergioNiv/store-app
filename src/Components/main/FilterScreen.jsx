@@ -24,6 +24,7 @@ export const FilterScreen = () => {
 				</div>
 				<div
 					className={`type__menu-black ${filterState && 'activeFilterType'}`}
+					onClick={() => setFilterState(!filterState)}
 				>
 					<ul className="type__menu">
 						<button onClick={handleActiveFilter} className="btn__back">
@@ -168,6 +169,7 @@ export const FilterScreen = () => {
 				</div>
 				<div
 					className={`order__menu-black ${orderState && 'activeFilterType'}`}
+					onClick={() => setOrderState(!orderState)}
 				>
 					<ul className="order__menu">
 						<button onClick={handleActiveOrder} className="btn__back">

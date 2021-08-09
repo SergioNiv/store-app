@@ -5,11 +5,9 @@ import { useForm } from '../../hooks/useForm';
 import { getClothesByName } from '../../selectors/getClothesByName';
 
 import { NavLogout } from './NavLogout';
-import { useDispatch, useSelector } from 'react-redux';
-import { filterClothesByGender } from '../../actions/filter';
+import { useSelector } from 'react-redux';
 
 export const Navbar = () => {
-	const dispatch = useDispatch();
 	const { name: displayName } = useSelector((state) => state.ui);
 
 	const location = useLocation();
@@ -36,15 +34,8 @@ export const Navbar = () => {
 	const [btnMenu, setBtnMenu] = useState(false);
 	const [btnSearch, setBtnSearch] = useState(false);
 
-	const handleBtnMan = () => {
-		setBtnMenu(!btnMenu);
-		dispatch(filterClothesByGender('hombre'));
-	};
-
-	const handleBtnWoman = () => {
-		setBtnMenu(!btnMenu);
-		dispatch(filterClothesByGender('mujer'));
-	};
+	const handleBtnMan = () => setBtnMenu(!btnMenu);
+	const handleBtnWoman = () => setBtnMenu(!btnMenu);
 
 	const handleBtnSearch = () => setBtnSearch(!btnSearch);
 	const handleBtnMenu = () => setBtnMenu(!btnMenu);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { ClothesDetails } from '../Components/clothes/ClothesDetails';
-import { HomeScreen } from '../Components/main/HomeScreen';
+import { HomeScreen } from '../Components/home/HomeScreen';
 import { ManScreen } from '../Components/main/ManScreen';
 import { SearchScreen } from '../Components/main/SearchScreen';
 import { WomanScreen } from '../Components/main/WomanScreen';
