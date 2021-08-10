@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { Link } from 'react-router-dom';
@@ -12,8 +13,7 @@ import { useForm } from '../../hooks/useForm';
 export const LoginScreen = ({ history }) => {
 	const dispatch = useDispatch();
 
-	const { auth, ui } = useSelector((state) => state);
-	const { name } = auth;
+	const { ui } = useSelector((state) => state);
 	const { loading, isLoggedIn } = ui;
 
 	const [formValues, handleInputChange] = useForm({
@@ -26,14 +26,17 @@ export const LoginScreen = ({ history }) => {
 	const handleLogin = (e) => {
 		e.preventDefault();
 		dispatch(startLoginWithEmailPassword(email, password));
-		if (isLoggedIn) {
-			history.push('/');
-		}
 	};
 
 	const handleGoogleLogin = () => {
 		dispatch(startGoogleLogin());
 	};
+
+	useEffect(() => {
+		if (isLoggedIn) {
+			history.replace('/');
+		}
+	}, [isLoggedIn, history]);
 
 	return (
 		<>
@@ -58,11 +61,7 @@ export const LoginScreen = ({ history }) => {
 					value={password}
 					onChange={handleInputChange}
 				/>
-				{isLoggedIn ? (
-					<div style={{ textAlign: 'center' }}>
-						Hola {name} toca nuevamente para ingresar
-					</div>
-				) : null}
+
 				<button type="submit" className="btn" disabled={loading}>
 					Login
 				</button>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import validator from 'validator';
@@ -6,10 +6,16 @@ import { startRegisterWithEmailPassword } from '../../actions/auth';
 import { setError, setRemoveError } from '../../actions/ui';
 import { useForm } from '../../hooks/useForm';
 
-export const RegisterScreen = () => {
+export const RegisterScreen = ({ history }) => {
 	const dispatch = useDispatch();
 	const { ui } = useSelector((state) => state);
-	const { msgError } = ui;
+	const { msgError, isLoggedIn } = ui;
+
+	useEffect(() => {
+		if (isLoggedIn) {
+			history.replace('/');
+		}
+	}, [isLoggedIn, history]);
 
 	const [formValue, handleInputchange] = useForm({
 		name: 'Hernando',

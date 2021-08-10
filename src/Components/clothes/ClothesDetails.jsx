@@ -18,7 +18,6 @@ export const ClothesDetails = () => {
 	if (!clothes) {
 		return <Redirect to="/" />;
 	}
-	console.log(clothes);
 	return (
 		<div className="details__container">
 			<figure className="details__container-img">
