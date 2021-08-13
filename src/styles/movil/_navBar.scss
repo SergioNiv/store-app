@@ -32,6 +32,7 @@
 			background-color: $red-off;
 			color: #ffff;
 			border-right: 1px solid #fff;
+			cursor: pointer;
 		}
 		.nav__login {
 			width: 15%;
@@ -49,6 +50,9 @@
 			background-color: $red-off;
 			color: #ffff;
 			border-right: 1px solid #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 		.nav__categories {
 			width: 20%;
