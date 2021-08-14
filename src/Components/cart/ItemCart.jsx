@@ -6,19 +6,15 @@ import {
 	decrementPriceTotal,
 	incrementPriceTotal,
 } from '../../actions/cart';
-import { useCounter } from '../../hooks/useCounter';
 
-export const ItemCart = ({ name, sizeSelect, price, id }) => {
+export const ItemCart = ({ name, sizeSelect, price, id, items }) => {
 	const dispatch = useDispatch();
-	const { counter, increment, decrement } = useCounter(1);
 
 	const handleDecrement = () => {
-		decrement();
-		counter > 1 && dispatch(decrementPriceTotal(price));
+		items > 1 && dispatch(decrementPriceTotal(price, id));
 	};
 	const handleIncrement = () => {
-		increment();
-		dispatch(incrementPriceTotal(price));
+		dispatch(incrementPriceTotal(price, id));
 	};
 
 	const handleDeleteItem = () => {
@@ -29,7 +25,7 @@ export const ItemCart = ({ name, sizeSelect, price, id }) => {
 		<div className="item__cart">
 			<div className="container__cart">
 				<figure className="item__img-container">
-					<span className="cart__indicator">{counter}</span>
+					<span className="cart__indicator">{items}</span>
 					<img
 						className="item__cart-img"
 						src={`../assets/moda/${id}.jpg`}
@@ -40,7 +36,7 @@ export const ItemCart = ({ name, sizeSelect, price, id }) => {
 					<span className="item__name">{name}</span>
 					<span className="item__shipping">Talla {sizeSelect}</span>
 					<span className="item__shipping">Envio a domicilio</span>
-					<span className="item__price">s./ {price}</span>
+					<span className="item__price">s./ {price.toFixed(2)}</span>
 				</div>
 			</div>
 
@@ -56,7 +52,7 @@ export const ItemCart = ({ name, sizeSelect, price, id }) => {
 					<span className="btn__rest" onClick={handleDecrement}>
 						-
 					</span>
-					<span className="cart__count">{counter}</span>
+					<span className="cart__count">{items}</span>
 					<span className="btn__add" onClick={handleIncrement}>
 						+
 					</span>

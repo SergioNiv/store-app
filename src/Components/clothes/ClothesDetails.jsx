@@ -26,6 +26,7 @@ export const ClothesDetails = () => {
 			addNewItemCart({
 				...clothes,
 				sizeSelect: sizeActive,
+				items: 1,
 			})
 		);
 	};

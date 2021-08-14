@@ -28,23 +28,44 @@ export const cartReducer = (state = initialState, action) => {
 		case types.cartPriceTotal:
 			return {
 				...state,
-				totalPrice: state.cartItems.reduce(
-					(sum, value) =>
-						typeof value.price == 'number' ? sum + value.price : sum,
-					0
-				),
+				totalPrice: state.cartItems
+					.reduce(
+						(sum, value) =>
+							typeof value.price == 'number'
+								? sum + value.price * value.items
+								: sum,
+						0
+					)
+					.toFixed(2),
 			};
 
 		case types.cartIncrementTotalPrice:
+			const incrementState = () => {
+				for (let i = 0; i < state.cartItems.length; i++) {
+					if (state.cartItems[i].id === action.payload.id) {
+						state.cartItems[i].items = state.cartItems[i].items + 1;
+					}
+				}
+				return [...state.cartItems];
+			};
+
 			return {
 				...state,
-				totalPrice: state.totalPrice + action.payload,
+				cartItems: incrementState(),
 			};
 
 		case types.cartDecrementTotalPrice:
+			const decrementState = () => {
+				for (let i = 0; i < state.cartItems.length; i++) {
+					if (state.cartItems[i].id === action.payload.id) {
+						state.cartItems[i].items = state.cartItems[i].items - 1;
+					}
+				}
+				return [...state.cartItems];
+			};
 			return {
 				...state,
-				totalPrice: state.totalPrice - action.payload,
+				cartItems: decrementState(),
 			};
 		case types.cartDeleteItem:
 			return {

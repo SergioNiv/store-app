@@ -9,13 +9,20 @@ export const modifyPriceTotal = () => ({
 	type: types.cartPriceTotal,
 });
 
-export const incrementPriceTotal = (price) => ({
+export const incrementPriceTotal = (price, id) => ({
 	type: types.cartIncrementTotalPrice,
-	payload: price,
+	payload: {
+		price,
+		id,
+	},
 });
-export const decrementPriceTotal = (price) => ({
+
+export const decrementPriceTotal = (price, id) => ({
 	type: types.cartDecrementTotalPrice,
-	payload: price,
+	payload: {
+		price,
+		id,
+	},
 });
 
 export const cartDeleteItem = (id, sizeSelect) => ({
