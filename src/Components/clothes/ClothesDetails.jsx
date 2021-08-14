@@ -1,8 +1,14 @@
 import React, { useMemo } from 'react';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Redirect, useHistory, useParams } from 'react-router-dom';
+import { addNewItemCart } from '../../actions/cart';
 import { getClothesById } from '../../selectors/getClothesById';
 
 export const ClothesDetails = () => {
+	const dispatch = useDispatch();
+	const [sizeActive, setSizeActive] = useState(null);
+
 	const { clotId } = useParams();
 	const history = useHistory();
 	const clothes = useMemo(() => getClothesById(clotId), [clotId]);
@@ -15,6 +21,14 @@ export const ClothesDetails = () => {
 		history.goBack();
 	};
 
+	const handleAddNewCard = () => {
+		dispatch(
+			addNewItemCart({
+				...clothes,
+				sizeSelect: sizeActive,
+			})
+		);
+	};
 	if (!clothes) {
 		return <Redirect to="/" />;
 	}
@@ -36,19 +50,39 @@ export const ClothesDetails = () => {
 				</span>
 				{type === 'pantalones' ? (
 					<div className="details__size">
-						<span className="size">28</span>
-						<span className="size">30</span>
-						<span className="size">32</span>
-						<span className="size">34</span>
-						<span className="size">36</span>
+						<button className="size" onClick={() => setSizeActive('28')}>
+							28
+						</button>
+						<button className="size" onClick={() => setSizeActive('30')}>
+							30
+						</button>
+						<button className="size" onClick={() => setSizeActive('32')}>
+							32
+						</button>
+						<button className="size" onClick={() => setSizeActive('34')}>
+							34
+						</button>
+						<button className="size" onClick={() => setSizeActive('36')}>
+							36
+						</button>
 					</div>
 				) : (
 					<div className="details__size">
-						<span className="size">S</span>
-						<span className="size">M</span>
-						<span className="size">L</span>
-						<span className="size">XL</span>
-						<span className="size">XXL</span>
+						<button className="size" onClick={() => setSizeActive('S')}>
+							S
+						</button>
+						<button className="size" onClick={() => setSizeActive('M')}>
+							M
+						</button>
+						<button className="size" onClick={() => setSizeActive('L')}>
+							L
+						</button>
+						<button className="size" onClick={() => setSizeActive('XL')}>
+							XL
+						</button>
+						<button className="size" onClick={() => setSizeActive('XXL')}>
+							XXL
+						</button>
 					</div>
 				)}
 				<div className="details__size-result">
@@ -72,7 +106,15 @@ export const ClothesDetails = () => {
 						</li>
 					</ul>
 				</div>
-				<button className="btn__add-car">Elige tu talla</button>
+
+				{sizeActive ? (
+					<button className="btn__add-car" onClick={handleAddNewCard}>
+						Ir a pagar
+					</button>
+				) : (
+					<button className="btn__add-car">Elige tu talla</button>
+				)}
+
 				<button className="btn__back" onClick={handleReturn}>
 					Volver
 				</button>
