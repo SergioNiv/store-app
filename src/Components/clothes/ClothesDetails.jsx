@@ -51,37 +51,67 @@ export const ClothesDetails = () => {
 				</span>
 				{type === 'pantalones' ? (
 					<div className="details__size">
-						<button className="size" onClick={() => setSizeActive('28')}>
+						<button
+							className={`size ${sizeActive === '28' && 'size-active'}`}
+							onClick={() => setSizeActive('28')}
+						>
 							28
 						</button>
-						<button className="size" onClick={() => setSizeActive('30')}>
+						<button
+							className={`size ${sizeActive === '30' && 'size-active'}`}
+							onClick={() => setSizeActive('30')}
+						>
 							30
 						</button>
-						<button className="size" onClick={() => setSizeActive('32')}>
+						<button
+							className={`size ${sizeActive === '32' && 'size-active'}`}
+							onClick={() => setSizeActive('32')}
+						>
 							32
 						</button>
-						<button className="size" onClick={() => setSizeActive('34')}>
+						<button
+							className={`size ${sizeActive === '34' && 'size-active'}`}
+							onClick={() => setSizeActive('34')}
+						>
 							34
 						</button>
-						<button className="size" onClick={() => setSizeActive('36')}>
+						<button
+							className={`size ${sizeActive === '36' && 'size-active'}`}
+							onClick={() => setSizeActive('36')}
+						>
 							36
 						</button>
 					</div>
 				) : (
 					<div className="details__size">
-						<button className="size" onClick={() => setSizeActive('S')}>
+						<button
+							className={`size ${sizeActive === 'S' && 'size-active'}`}
+							onClick={() => setSizeActive('S')}
+						>
 							S
 						</button>
-						<button className="size" onClick={() => setSizeActive('M')}>
+						<button
+							className={`size ${sizeActive === 'M' && 'size-active'}`}
+							onClick={() => setSizeActive('M')}
+						>
 							M
 						</button>
-						<button className="size" onClick={() => setSizeActive('L')}>
+						<button
+							className={`size ${sizeActive === 'L' && 'size-active'}`}
+							onClick={() => setSizeActive('L')}
+						>
 							L
 						</button>
-						<button className="size" onClick={() => setSizeActive('XL')}>
+						<button
+							className={`size ${sizeActive === 'XL' && 'size-active'}`}
+							onClick={() => setSizeActive('XL')}
+						>
 							XL
 						</button>
-						<button className="size" onClick={() => setSizeActive('XXL')}>
+						<button
+							className={`size ${sizeActive === 'XXL' && 'size-active'}`}
+							onClick={() => setSizeActive('XXL')}
+						>
 							XXL
 						</button>
 					</div>
@@ -110,7 +140,7 @@ export const ClothesDetails = () => {
 
 				{sizeActive ? (
 					<button className="btn__add-car" onClick={handleAddNewCard}>
-						Ir a pagar
+						Agregar al carrito
 					</button>
 				) : (
 					<button className="btn__add-car">Elige tu talla</button>

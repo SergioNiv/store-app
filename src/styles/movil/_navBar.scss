@@ -53,6 +53,22 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			position: relative;
+
+			.store__indicator {
+				position: absolute;
+				display: block;
+				width: 1.8rem;
+				height: 1.8rem;
+				border-radius: 50%;
+				background-color: #3ab1c7;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #fff;
+				top: calc(50% - 22px);
+				right: calc(50% - 22px);
+			}
 		}
 		.nav__categories {
 			width: 20%;

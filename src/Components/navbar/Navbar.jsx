@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux';
 
 export const Navbar = () => {
 	const { name: displayName } = useSelector((state) => state.ui);
+	const { cartItems } = useSelector((state) => state.cart);
 
 	const location = useLocation();
 	const { q = '' } = queryString.parse(location.search);
@@ -67,6 +68,7 @@ export const Navbar = () => {
 				<NavLogout />
 
 				<Link to="/cart" className="nav__btn-store">
+					<span className="store__indicator">{cartItems.length}</span>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="22"
@@ -102,7 +104,7 @@ export const Navbar = () => {
 					</div>
 				</div>
 			</nav>
-			{displayName && <div style={{ color: 'white' }}>Hola {displayName}</div>}
+
 			<form
 				onSubmit={handleSearch}
 				className={`nav__search ${btnSearch && 'activeSearch'}`}
@@ -120,6 +122,11 @@ export const Navbar = () => {
 
 			{name !== '' && filterClothes.length === 0 && (
 				<div className="search__alert">No se encontró "{name}"</div>
+			)}
+			{displayName && (
+				<div style={{ backgroundColor: 'white', padding: '5px' }}>
+					Bievenida {displayName}
+				</div>
 			)}
 		</div>
 	);
