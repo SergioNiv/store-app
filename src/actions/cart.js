@@ -9,19 +9,21 @@ export const modifyPriceTotal = () => ({
 	type: types.cartPriceTotal,
 });
 
-export const incrementPriceTotal = (price, id) => ({
+export const incrementPriceTotal = (price, id, sizeSelect) => ({
 	type: types.cartIncrementTotalPrice,
 	payload: {
 		price,
 		id,
+		sizeSelect,
 	},
 });
 
-export const decrementPriceTotal = (price, id) => ({
+export const decrementPriceTotal = (price, id, sizeSelect) => ({
 	type: types.cartDecrementTotalPrice,
 	payload: {
 		price,
 		id,
+		sizeSelect,
 	},
 });
 

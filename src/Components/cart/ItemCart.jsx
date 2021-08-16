@@ -11,10 +11,10 @@ export const ItemCart = ({ name, sizeSelect, price, id, items }) => {
 	const dispatch = useDispatch();
 
 	const handleDecrement = () => {
-		items > 1 && dispatch(decrementPriceTotal(price, id));
+		items > 1 && dispatch(decrementPriceTotal(price, id, sizeSelect));
 	};
 	const handleIncrement = () => {
-		dispatch(incrementPriceTotal(price, id));
+		dispatch(incrementPriceTotal(price, id, sizeSelect));
 	};
 
 	const handleDeleteItem = () => {
