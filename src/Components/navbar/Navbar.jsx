@@ -10,6 +10,7 @@ import { useSelector } from 'react-redux';
 export const Navbar = () => {
 	const { name: displayName } = useSelector((state) => state.ui);
 	const { cartItems } = useSelector((state) => state.cart);
+	const sumarItems = cartItems.reduce((sum, value) => sum + value.items, 0);
 
 	const location = useLocation();
 	const { q = '' } = queryString.parse(location.search);
@@ -68,7 +69,7 @@ export const Navbar = () => {
 				<NavLogout />
 
 				<Link to="/cart" className="nav__btn-store">
-					<span className="store__indicator">{cartItems.length}</span>
+					<span className="store__indicator">{sumarItems}</span>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="22"

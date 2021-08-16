@@ -13,7 +13,7 @@ export const ClothesCard = ({ id, name, price }) => {
 			</figure>
 			<div className="card__text">
 				<span className="card__name">{name}</span>
-				<span className="card__price">s./ {price}</span>
+				<span className="card__price">s./ {price.toFixed(2)}</span>
 				<span className="card__shipping">Envio a domicilio</span>
 				<Link to={`/details/${id}`} className="card__more">
 					Más...

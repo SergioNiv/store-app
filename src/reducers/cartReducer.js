@@ -14,7 +14,6 @@ export const cartReducer = (state = initialState, action) => {
 							state.cartItems[i].id === action.payload.id &&
 							state.cartItems[i].sizeSelect === action.payload.sizeSelect
 						) {
-							console.log('me salí');
 							return null;
 						}
 					}
@@ -23,11 +22,7 @@ export const cartReducer = (state = initialState, action) => {
 			};
 			return {
 				...state,
-				/* cartItems: [...state.cartItems, action.payload], */
-
-				//TODO: validar items repetidos, para no agregarlos en el state
-				//item.id !== action.payload.id ? action.payload : []
-				/* cartItems: [...state.cartItems, validarItemRepetido()], */
+				//TODO: optimizar código para validar items repetidos y no sean agregados al state
 				cartItems:
 					validItemRepeated() !== null
 						? [...state.cartItems, action.payload]
@@ -39,7 +34,7 @@ export const cartReducer = (state = initialState, action) => {
 				totalPrice: state.cartItems
 					.reduce(
 						(sum, value) =>
-							typeof value.price == 'number'
+							typeof value.price === 'number'
 								? sum + value.price * value.items
 								: sum,
 						0

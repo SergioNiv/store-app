@@ -22,18 +22,6 @@ export const ClothesDetails = () => {
 	};
 
 	const handleAddNewCard = () => {
-		/* for (let i = 0; i <= cartItems.length - 1; i++) {
-			if (cartItems.length !== 0) {
-				console.log(cartItems[i].id, clothes.id);
-				console.log(cartItems[i].sizeSelect, clothes.sizeActive);
-				if (
-					cartItems[i].id === clothes.id &&
-					cartItems[i].sizeSelect === clothes.sizeActive
-				) {
-					return console.log('me salí');
-				}
-			}
-		} */
 		dispatch(
 			addNewItemCart({
 				...clothes,
@@ -41,14 +29,6 @@ export const ClothesDetails = () => {
 				items: 1,
 			})
 		);
-
-		/* return dispatch(
-			addNewItemCart({
-				...clothes,
-				sizeSelect: sizeActive,
-				items: 1,
-			})
-		); */
 	};
 
 	if (!clothes) {

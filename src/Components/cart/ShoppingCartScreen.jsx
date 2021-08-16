@@ -7,6 +7,7 @@ import { ItemCart } from './ItemCart';
 export const ShoppingCartScreen = () => {
 	const { cartItems, totalPrice } = useSelector((state) => state.cart);
 	const dispatch = useDispatch();
+	const sumarItems = cartItems.reduce((sum, value) => sum + value.items, 0);
 
 	useEffect(() => {
 		dispatch(modifyPriceTotal());
@@ -20,7 +21,7 @@ export const ShoppingCartScreen = () => {
 		<div className="cart__container">
 			<div className="cart__resumen">
 				<h3 className="cart__title">Carrito de Compras</h3>
-				<span className="cart__products">{cartItems.length} Productos</span>
+				<span className="cart__products">{sumarItems} Productos</span>
 
 				<div className="cart__price-container">
 					<span className="cart__text-total">Total</span>
