@@ -1,9 +1,11 @@
 import React, { useMemo } from 'react';
+import { useEffect } from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Redirect, useHistory, useParams } from 'react-router-dom';
 import { addNewItemCart } from '../../actions/cart';
 import { getClothesById } from '../../selectors/getClothesById';
+import { ClothesModal } from './ClothesModal';
 
 export const ClothesDetails = () => {
 	const dispatch = useDispatch();
@@ -12,10 +14,15 @@ export const ClothesDetails = () => {
 	const { clotId } = useParams();
 	const history = useHistory();
 	const clothes = useMemo(() => getClothesById(clotId), [clotId]);
+	const [openModal, setOpenModal] = useState(false);
 
 	const { id, name, type, size, price, characters } = clothes;
 	const { S28, M30, L32, XL34, XXL36 } = size[0];
 	const { material, typec, color } = characters[0];
+
+	useEffect(() => {
+		window.scrollTo(0, 0); //desplazar a la parte superior del DOM al hacer render
+	}, []);
 
 	const handleReturn = () => {
 		history.goBack();
@@ -29,6 +36,7 @@ export const ClothesDetails = () => {
 				items: 1,
 			})
 		);
+		setOpenModal(!openModal);
 	};
 
 	if (!clothes) {
@@ -144,13 +152,22 @@ export const ClothesDetails = () => {
 						Agregar al carrito
 					</button>
 				) : (
-					<button className="btn__add-car">Elige tu talla</button>
+					<button className="btn__add-car disabled">Elige tu talla</button>
 				)}
 
 				<button className="btn__back" onClick={handleReturn}>
 					Volver
 				</button>
 			</div>
+			<ClothesModal
+				openModal={openModal}
+				setOpenModal={setOpenModal}
+				content={{
+					...clothes,
+					sizeSelect: sizeActive,
+					items: 1,
+				}}
+			/>
 		</div>
 	);
 };

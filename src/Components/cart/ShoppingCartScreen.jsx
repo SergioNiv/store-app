@@ -10,6 +10,10 @@ export const ShoppingCartScreen = () => {
 	const sumarItems = cartItems.reduce((sum, value) => sum + value.items, 0);
 
 	useEffect(() => {
+		window.scrollTo(0, 0); //desplazar a la parte superior del DOM al hacer render
+	}, []);
+
+	useEffect(() => {
 		dispatch(modifyPriceTotal());
 	}, [cartItems, dispatch]);
 

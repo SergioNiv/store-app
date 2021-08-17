@@ -35,7 +35,7 @@ export const ItemCart = ({ name, sizeSelect, price, id, items }) => {
 				<div className="item__text">
 					<span className="item__name">{name}</span>
 					<span className="item__shipping">Talla {sizeSelect}</span>
-					<span className="item__shipping">Envio a domicilio</span>
+					<span className="item__shipping">Envío a domicilio</span>
 					<span className="item__price">s./ {price.toFixed(2)}</span>
 				</div>
 			</div>
