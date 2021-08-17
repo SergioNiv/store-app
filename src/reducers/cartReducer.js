@@ -21,8 +21,8 @@ export const cartReducer = (state = initialState, action) => {
 				return action.payload;
 			};
 			return {
-				...state,
 				//TODO: optimizar código para validar items repetidos y no sean agregados al state
+				...state,
 				cartItems:
 					validItemRepeated() !== null
 						? [...state.cartItems, action.payload]

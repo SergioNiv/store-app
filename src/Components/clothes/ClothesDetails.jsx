@@ -45,7 +45,7 @@ export const ClothesDetails = () => {
 			</figure>
 			<div className="details__text">
 				<span className="details__name">{name}</span>
-				<span className="details__price">s./ {price}</span>
+				<span className="details__price">s./ {price.toFixed(2)}</span>
 				<span className="details__shipping">Envio a domicilio</span>
 				<span className="details__size-title">
 					Unidades disponibles por talla:
