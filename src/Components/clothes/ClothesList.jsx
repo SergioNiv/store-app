@@ -1,10 +1,15 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import { ClothesCard } from './ClothesCard';
 
 export const ClothesList = () => {
 	const { clothes } = useSelector((state) => state.filter);
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	return (
 		<>

@@ -1,10 +1,12 @@
 import React from 'react';
-import { CarouselScreen } from './CarouselScreen';
+import { CarouselFeatured } from './CarouselFeatured';
+import { CarouselPortada } from './CarouselPortada';
 
 export const HomeScreen = () => {
 	return (
 		<div>
-			<CarouselScreen />
+			<CarouselPortada />
+			<CarouselFeatured />
 		</div>
 	);
 };
