@@ -5,3 +5,12 @@
 	gap: 10px;
 	grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
 }
+
+.search__alert {
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+}

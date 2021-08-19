@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch, useLocation } from 'react-router-dom';
 import { ShoppingCartScreen } from '../Components/cart/ShoppingCartScreen';
 import { ClothesDetails } from '../Components/clothes/ClothesDetails';
 import { HomeScreen } from '../Components/home/HomeScreen';
@@ -9,6 +9,10 @@ import { WomanScreen } from '../Components/main/WomanScreen';
 import { Navbar } from '../Components/navbar/Navbar';
 
 export const DashBoardRouter = () => {
+	//Guardar el último path renderizado
+	const location = useLocation();
+	localStorage.setItem('lastPath', location.pathname);
+
 	return (
 		<>
 			<Navbar />

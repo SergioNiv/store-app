@@ -20,9 +20,7 @@ export const ClothesList = () => {
 			</div>
 
 			{clothes.length === 0 && (
-				<div style={{ textAlign: 'center' }}>
-					" No se encontró ningún elemento, escoja otro tipo o color por favor "
-				</div>
+				<div className="search__alert">" No se encontró ningún elemento "</div>
 			)}
 		</>
 	);

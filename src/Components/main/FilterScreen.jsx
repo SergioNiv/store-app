@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import {
 	filterClothesByColor,
 	filterClothesByPrice,
@@ -7,6 +8,7 @@ import {
 } from '../../actions/filter';
 
 export const FilterScreen = () => {
+	const history = useHistory();
 	const dispatch = useDispatch();
 	const { gender } = useSelector((state) => state.filter);
 
@@ -35,44 +37,79 @@ export const FilterScreen = () => {
 							<ul className="type__submenu">
 								<li
 									className="type__submenu-link"
-									onClick={() => dispatch(filterClothesByType('polo', gender))}
+									onClick={() => {
+										gender && dispatch(filterClothesByType('polo', gender));
+										gender || history.push('/search/polo');
+									}}
 								>
 									Polo
 								</li>
 								<li
 									className="type__submenu-link"
-									onClick={() =>
-										dispatch(filterClothesByType('sueter', gender))
-									}
+									onClick={() => {
+										gender && dispatch(filterClothesByType('sueter', gender));
+										gender || history.push('/search/sueter');
+									}}
 								>
 									Sueter
 								</li>
 								<li
 									className="type__submenu-link"
-									onClick={() =>
-										dispatch(filterClothesByType('pantalones', gender))
-									}
+									onClick={() => {
+										gender &&
+											dispatch(filterClothesByType('pantalones', gender));
+										gender || history.push('/search/pantalones');
+									}}
 								>
 									Pantalón
 								</li>
-								{gender === 'mujer' ? (
+								{gender === 'mujer' && (
 									<li
 										className="type__submenu-link"
-										onClick={() =>
-											dispatch(filterClothesByType('blusas', gender))
-										}
+										onClick={() => {
+											gender && dispatch(filterClothesByType('blusas', gender));
+											gender || history.push('/search/blusas');
+										}}
 									>
 										Blusa
 									</li>
-								) : (
+								)}
+
+								{gender === 'hombre' && (
 									<li
 										className="type__submenu-link"
-										onClick={() =>
-											dispatch(filterClothesByType('blusas', gender))
-										}
+										onClick={() => {
+											gender && dispatch(filterClothesByType('camisa', gender));
+											gender || history.push('/search/camisa');
+										}}
 									>
 										Camisa
 									</li>
+								)}
+
+								{gender === null && (
+									<>
+										<li
+											className="type__submenu-link"
+											onClick={() => {
+												gender &&
+													dispatch(filterClothesByType('blusas', gender));
+												gender || history.push('/search/blusas');
+											}}
+										>
+											Blusa
+										</li>
+										<li
+											className="type__submenu-link"
+											onClick={() => {
+												gender &&
+													dispatch(filterClothesByType('camisa', gender));
+												gender || history.push('/search/camisa');
+											}}
+										>
+											Camisa
+										</li>
+									</>
 								)}
 							</ul>
 						</details>
@@ -82,79 +119,102 @@ export const FilterScreen = () => {
 							<ul className="type__submenu">
 								<li
 									className="type__submenu-link"
-									onClick={() =>
-										dispatch(filterClothesByColor('Negro', gender))
-									}
+									onClick={() => {
+										gender && dispatch(filterClothesByColor('Negro', gender));
+										gender || history.push('/search/negro');
+									}}
 								>
 									Negro
 								</li>
 								<li
 									className="type__submenu-link"
-									onClick={() =>
-										dispatch(filterClothesByColor('Turquesa', gender))
-									}
+									onClick={() => {
+										gender &&
+											dispatch(filterClothesByColor('Turquesa', gender));
+										gender || history.push('/search/turquesa');
+									}}
 								>
 									Turquesa
 								</li>
 								<li
 									className="type__submenu-link"
-									onClick={() =>
-										dispatch(filterClothesByColor('Amarillo', gender))
-									}
+									onClick={() => {
+										gender &&
+											dispatch(filterClothesByColor('Amarillo', gender));
+										gender || history.push('/search/amarillo');
+									}}
 								>
 									Amarillo
 								</li>
 								<li
 									className="type__submenu-link"
-									onClick={() =>
-										dispatch(filterClothesByColor('Blanco', gender))
-									}
+									onClick={() => {
+										gender && dispatch(filterClothesByColor('Blanco', gender));
+										gender || history.push('/search/blanco');
+									}}
 								>
 									Blanco
 								</li>
 								<li
 									className="type__submenu-link"
-									onClick={() =>
-										dispatch(filterClothesByColor('Celeste', gender))
-									}
+									onClick={() => {
+										gender && dispatch(filterClothesByColor('Celeste', gender));
+										gender || history.push('/search/celeste');
+									}}
 								>
 									Celeste
 								</li>
 								<li
 									className="type__submenu-link"
-									onClick={() =>
-										dispatch(filterClothesByColor('Verde', gender))
-									}
+									onClick={() => {
+										gender && dispatch(filterClothesByColor('Verde', gender));
+										gender || history.push('/search/verde');
+									}}
 								>
 									Verde
 								</li>
 								<li
 									className="type__submenu-link"
-									onClick={() => dispatch(filterClothesByColor('Azul', gender))}
+									onClick={() => {
+										gender && dispatch(filterClothesByColor('Azul', gender));
+										gender || history.push('/search/azul');
+									}}
 								>
 									Azul
 								</li>
 								<li
 									className="type__submenu-link"
-									onClick={() => dispatch(filterClothesByColor('Café', gender))}
+									onClick={() => {
+										gender && dispatch(filterClothesByColor('Café', gender));
+										gender || history.push('/search/café');
+									}}
 								>
 									Café
 								</li>
 								<li
 									className="type__submenu-link"
-									onClick={() => dispatch(filterClothesByColor('Gris', gender))}
+									onClick={() => {
+										gender && dispatch(filterClothesByColor('Gris', gender));
+										gender || history.push('/search/gris');
+									}}
 								>
 									Gris
 								</li>
 								<li
 									className="type__submenu-link"
-									onClick={() => dispatch(filterClothesByColor('Rojo', gender))}
+									onClick={() => {
+										gender && dispatch(filterClothesByColor('Rojo', gender));
+										gender || history.push('/search/rojo');
+									}}
 								>
 									Rojo
 								</li>
 								<li
 									className="type__submenu-link"
-									onClick={() => dispatch(filterClothesByColor('Piel', gender))}
+									onClick={() => {
+										gender && dispatch(filterClothesByColor('Piel', gender));
+										gender || history.push('/search/piel');
+									}}
 								>
 									Piel
 								</li>

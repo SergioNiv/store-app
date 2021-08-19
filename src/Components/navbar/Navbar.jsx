@@ -1,36 +1,33 @@
-import React, { useMemo, useState } from 'react';
-import queryString from 'query-string';
-import { Link, useHistory, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+
+import { Link, useHistory } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
-import { getClothesByName } from '../../selectors/getClothesByName';
 
 import { NavLogout } from './NavLogout';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { filterSearchMenu } from '../../actions/filter';
 
 export const Navbar = () => {
 	const { name: displayName } = useSelector((state) => state.ui);
 	const { cartItems } = useSelector((state) => state.cart);
-	const sumarItems = cartItems.reduce((sum, value) => sum + value.items, 0);
 
-	const location = useLocation();
-	const { q = '' } = queryString.parse(location.search);
+	const sumarItems = cartItems.reduce((sum, value) => sum + value.items, 0);
+	const dispatch = useDispatch();
 
 	const history = useHistory();
 
-	const [values, handleInputChange] = useForm({ name: q });
+	const [values, handleInputChange, reset] = useForm({ name: '' });
 	const { name } = values;
-
-	const filterClothes = useMemo(() => getClothesByName(name), [name]);
-
-	const stringClothes = JSON.stringify(filterClothes);
 
 	const handleSearch = (e) => {
 		e.preventDefault();
 		if (name.trim().length < 1) {
 			return;
 		}
-		history.push(`/search/${stringClothes}`);
-		history.push(`?q=${name}`);
+
+		dispatch(filterSearchMenu(name));
+		reset();
+		history.push(`/search/${name}`);
 	};
 
 	const [btnMenu, setBtnMenu] = useState(false);
@@ -110,20 +107,19 @@ export const Navbar = () => {
 				onSubmit={handleSearch}
 				className={`nav__search ${btnSearch && 'activeSearch'}`}
 			>
-				<input
-					className="nav__search-input"
-					placeholder="¿Qué estas buscando?"
-					autoComplete="off"
-					type="text"
-					name="name"
-					value={name}
-					onChange={handleInputChange}
-				/>
+				<div className="nav__search-container">
+					<input
+						className="nav__search-input"
+						placeholder="¿Qué estas buscando?"
+						autoComplete="off"
+						type="text"
+						name="name"
+						value={name}
+						onChange={handleInputChange}
+					/>
+				</div>
 			</form>
 
-			{name !== '' && filterClothes.length === 0 && (
-				<div className="search__alert">No se encontró "{name}"</div>
-			)}
 			{displayName && (
 				<div style={{ backgroundColor: 'white', padding: '5px' }}>
 					Bievenida {displayName}

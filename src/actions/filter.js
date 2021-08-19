@@ -1,5 +1,6 @@
 import { getClothesByColor } from '../selectors/getClothesByColor';
 import { getClothesByGender } from '../selectors/getClothesByGender';
+import { getClothesByName } from '../selectors/getClothesByName';
 import { getClothesByPrice } from '../selectors/getClothesByPrice';
 import { getClothesByType } from '../selectors/getClothesByType';
 import { types } from '../type/types';
@@ -29,4 +30,9 @@ export const filterClothesByPrice = (order, gender) => ({
 
 export const clothesLogoutCleaning = () => ({
 	type: types.filterLogoutCleaning,
+});
+
+export const filterSearchMenu = (name) => ({
+	type: types.filterSearchMenu,
+	payload: getClothesByName(name),
 });

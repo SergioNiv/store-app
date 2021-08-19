@@ -119,30 +119,28 @@
 
 	.nav__search {
 		width: 100%;
-		height: 4rem;
+		height: 5rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		display: none;
 
-		.nav__search-input {
-			width: 80%;
-			height: 2rem;
-			border-radius: 6px;
-			outline: none;
-			border: none;
+		.nav__search-container {
+			width: 90%;
+			background-color: #fff;
+			border-radius: 4px;
+			.nav__search-input {
+				width: 95%;
+				display: block;
+				margin: 0 auto;
+				height: 3rem;
+				border-radius: 4px;
+				outline: none;
+				border: none;
+			}
 		}
 	}
 	.activeSearch {
 		display: flex;
 	}
-}
-
-.search__alert {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	height: 1.5rem;
-	padding-bottom: 5px;
 }

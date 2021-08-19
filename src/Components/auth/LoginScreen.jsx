@@ -13,6 +13,8 @@ import { useForm } from '../../hooks/useForm';
 export const LoginScreen = ({ history }) => {
 	const dispatch = useDispatch();
 
+	const lastPath = localStorage.getItem('lastPath'); //regresar a la última página visitada
+
 	const { ui } = useSelector((state) => state);
 	const { loading, isLoggedIn } = ui;
 
@@ -34,9 +36,9 @@ export const LoginScreen = ({ history }) => {
 
 	useEffect(() => {
 		if (isLoggedIn) {
-			history.replace('/');
+			history.replace(lastPath);
 		}
-	}, [isLoggedIn, history]);
+	}, [isLoggedIn, history, lastPath]);
 
 	return (
 		<>

@@ -14,6 +14,7 @@ export const types = {
 	filterByColor: '[filter] Get clothes by color',
 	filterByPrice: '[filter] Get clothes by price',
 	filterLogoutCleaning: '[filter] Clothes logout cleaning ',
+	filterSearchMenu: '[filter] Filter search menu ',
 
 	cartAddINewItem: '[cart] Add new item',
 	cartDeleteItem: '[cart] Delete item',

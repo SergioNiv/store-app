@@ -347,7 +347,7 @@ export const clothes = [
 
 	{
 		id: '016',
-		name: 'Sueter Manga Larga Hombre Marrón',
+		name: 'Sueter Manga Larga Hombre Café',
 		type: 'sueter',
 		gender: 'hombre',
 		size: [

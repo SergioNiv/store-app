@@ -30,6 +30,14 @@ export const filterReducer = (state = initialstate, action) => {
 			};
 		case types.filterLogoutCleaning:
 			return initialstate;
+
+		case types.filterSearchMenu:
+			return {
+				...state,
+				clothes: action.payload,
+				gender: null,
+			};
+
 		default:
 			return state;
 	}
