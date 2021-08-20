@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect, Route, Switch, useLocation } from 'react-router-dom';
 import { ShoppingCartScreen } from '../Components/cart/ShoppingCartScreen';
 import { ClothesDetails } from '../Components/clothes/ClothesDetails';
+import { FooterScreen } from '../Components/footer/FooterScreen';
 import { HomeScreen } from '../Components/home/HomeScreen';
 import { ManScreen } from '../Components/main/ManScreen';
 import { SearchScreen } from '../Components/main/SearchScreen';
@@ -27,6 +28,7 @@ export const DashBoardRouter = () => {
 					<Redirect to="/home" />
 				</Switch>
 			</div>
+			<FooterScreen />
 		</>
 	);
 };

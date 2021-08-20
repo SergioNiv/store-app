@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { modifyPriceTotal } from '../../actions/cart';
 import { ItemCart } from './ItemCart';
 
@@ -42,7 +43,12 @@ export const ShoppingCartScreen = () => {
 					/>
 				))}
 			</div>
-			<div className="espaciador"></div>
+			<div className="link_shopping-continue">
+				<Link className="link_shopping-continue" to="/">
+					Seguir comprando
+				</Link>
+			</div>
+
 			<div className="cart__btn-container">
 				<button className="cart__btn">Ir a pagar</button>
 			</div>

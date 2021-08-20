@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Link, useHistory } from 'react-router-dom';
+import { Link, NavLink, useHistory } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
 
 import { NavLogout } from './NavLogout';
@@ -83,15 +83,17 @@ export const Navbar = () => {
 							/>
 						</Link>
 					</figure>
+
 					<button onClick={handleBtnSearch} className="nav__btn-search">
 						<i className="fas fa-search"></i>
 						<span className="btn__search-text">Buscar</span>
 					</button>
-					<Link to="/cart" className="nav__btn-store">
+
+					<NavLink to="/cart" className="nav__btn-store">
 						<span className="store__indicator">{sumarItems}</span>
 						<i className="fas fa-cart-plus"></i>
 						<span className="nav__store-car">Carrito</span>
-					</Link>
+					</NavLink>
 
 					<NavLogout />
 

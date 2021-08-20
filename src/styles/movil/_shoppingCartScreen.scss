@@ -1,5 +1,7 @@
 .cart__container {
 	width: 100%;
+	//height: 80vh;
+	min-height: 80vh;
 
 	.cart__resumen {
 		width: 100%;
@@ -42,9 +44,18 @@
 			}
 		}
 	}
-	.espaciador {
-		width: 100%;
-		height: 60px;
+	.link_shopping-continue {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		margin-top: 1.5rem;
+		font-size: 1.4rem;
+		color: $black;
+
+		Link {
+			color: $black;
+		}
 	}
 	.cart__btn-container {
 		width: 100%;

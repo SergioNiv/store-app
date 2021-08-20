@@ -59,7 +59,7 @@
 				border-radius: 4px;
 				&:hover {
 					background-color: $red-off;
-					border: 3px solid lighten($color: $red-off, $amount: 6);
+					border: 3px solid $red_ligth;
 					color: #fff;
 				}
 			}
@@ -129,11 +129,11 @@
 			transition: background-color 0.3s;
 
 			&:hover {
-				background-color: lighten($color: $red-off, $amount: 10);
+				background-color: $red_ligth;
 			}
 		}
 		.disabled {
-			background-color: lighten($color: $red-off, $amount: 10);
+			background-color: $red_ligth;
 		}
 		.btn__back {
 			margin-top: 0.5rem;
