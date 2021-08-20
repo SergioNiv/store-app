@@ -91,6 +91,21 @@ export const Navbar = () => {
 						</Link>
 					</figure>
 
+					<form onSubmit={handleSearch} className="nav__search-desktop">
+						<div className="nav__search-container__desktop">
+							<input
+								className="nav__search-input__desktop"
+								placeholder="¿Qué estas buscando?"
+								autoComplete="off"
+								type="text"
+								name="name"
+								value={name}
+								onChange={handleInputChange}
+							/>
+							<i className="fas fa-search"></i>
+						</div>
+					</form>
+
 					<button onClick={handleBtnSearch} className="nav__btn-search">
 						<i className="fas fa-search"></i>
 						<span className="btn__search-text">Buscar</span>
