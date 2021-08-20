@@ -1,19 +1,22 @@
+.block-relleno {
+	width: 100%;
+	height: 7.8rem;
+}
 .nav__container {
 	width: 100%;
 	background-color: $red-off;
+	z-index: 500;
 
 	.nav {
 		width: 100%;
 		margin: 0 auto;
 		max-width: 1240px;
 		display: flex;
-		height: 6rem;
+		height: 7.8rem;
 
 		.nav__logo {
-			margin: 0;
-			padding: 0;
 			width: 35%;
-			height: 6rem;
+			height: 7.8rem;
 			display: flex;
 			justify-content: flex-start;
 			align-items: center;
@@ -25,7 +28,7 @@
 			}
 		}
 		.nav__btn-search {
-			width: 15%;
+			width: 18%;
 			border: none;
 			padding: 0;
 			margin: 0;
@@ -33,20 +36,26 @@
 			color: #ffff;
 			border-right: 1px solid #fff;
 			cursor: pointer;
-		}
-		.nav__login {
-			width: 15%;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			color: #ffff;
-			border-right: 1px solid #fff;
+			flex-direction: column;
+
+			.fa-search {
+				font-size: 2.2rem;
+			}
+
+			.btn__search-text {
+				text-align: center;
+				margin-top: 8px;
+				width: 50%;
+				display: block;
+				font-weight: 600;
+			}
 		}
 		.nav__btn-store {
-			width: 15%;
+			width: 18%;
 			border: none;
-			padding: 0;
-			margin: 0;
 			background-color: $red-off;
 			color: #ffff;
 			border-right: 1px solid #fff;
@@ -54,6 +63,8 @@
 			justify-content: center;
 			align-items: center;
 			position: relative;
+			flex-direction: column;
+			text-decoration: none;
 
 			.store__indicator {
 				position: absolute;
@@ -66,38 +77,116 @@
 				align-items: center;
 				justify-content: center;
 				color: #fff;
-				top: calc(50% - 22px);
-				right: calc(50% - 22px);
+				top: calc(50% - 32px);
+				right: calc(50% - 26px);
+			}
+			.fa-cart-plus {
+				font-size: 2.2rem;
+			}
+			.nav__store-car {
+				text-align: center;
+				margin-top: 8px;
+				width: 50%;
+				display: block;
+				font-weight: 600;
 			}
 		}
+
+		.nav__login {
+			width: 18%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #ffff;
+			border-right: 1px solid #fff;
+			flex-direction: column;
+			text-decoration: none;
+
+			.fa-sign-in-alt {
+				font-size: 2.2rem;
+			}
+			.nav__login-name {
+				text-align: center;
+				margin-top: 8px;
+				display: block;
+				font-weight: 600;
+			}
+		}
+
 		.nav__categories {
-			width: 20%;
+			width: 11%;
 			position: relative;
-			height: 6rem;
+			height: 8rem;
 			color: #ffff;
 
 			.nav__cat-text {
 				width: 100%;
 				display: block;
-				height: 6rem;
+				height: 7.8rem;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				cursor: pointer;
+				display: none;
 			}
+
+			/*Menu Icon */
+
+			.btn__menu {
+				width: 100%;
+				height: 7.8rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+
+				.menu-activador {
+					width: 2rem;
+					height: 2rem;
+					margin: 0 auto;
+					margin-top: 3rem;
+					padding-bottom: 2.8rem;
+
+					.menu__ancla {
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+						height: 100%;
+						&.menu-abierto .menu-activador-linea {
+							&:nth-child(1) {
+								transform: translateY(9px) rotate(45deg);
+							}
+							&:nth-child(2) {
+								opacity: 0;
+							}
+							&:nth-child(3) {
+								transform: translateY(-9px) rotate(-45deg);
+							}
+						}
+					}
+					.menu-activador-linea {
+						height: 3.5px;
+						background-color: #fff;
+						opacity: 1;
+						transform: translateY(0) rotate(0);
+						transition: all 0.3s;
+						border-radius: 6px;
+					}
+				}
+			}
+
 			.nav__menu {
 				position: absolute;
-				width: 100%;
-				margin: 0;
-				padding: 0;
+				width: 433%;
 				list-style: none;
 				display: none;
 				z-index: 500;
+				right: 0;
 
 				.nav__menu-link {
 					display: block;
 					width: 100%;
-					height: 4rem;
+					height: 5rem;
 					display: flex;
 					justify-content: center;
 					align-items: center;
@@ -143,4 +232,19 @@
 	.activeSearch {
 		display: flex;
 	}
+}
+
+.opacity {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 50;
+	min-width: 320px;
+}
+
+.fixed {
+	position: fixed;
+	top: 0;
 }
