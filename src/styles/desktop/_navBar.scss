@@ -14,13 +14,13 @@
 			width: 35%;
 			height: 7.8rem;
 			display: flex;
-			justify-content: flex-start;
+			justify-content: center;
 			align-items: center;
 
 			.nav__logo-img {
-				width: 95%;
-				height: 3rem;
+				width: 100%;
 				margin-left: 8px;
+				cursor: pointer;
 			}
 		}
 		.nav__search-desktop {

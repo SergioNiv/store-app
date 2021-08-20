@@ -71,6 +71,7 @@ export const Navbar = () => {
 	};
 
 	const handleBtnLogo = () => {
+		history.push('/');
 		setBtnMenu(false);
 		setBtnSearch(false);
 		setActiveOpacity(false);
@@ -82,13 +83,12 @@ export const Navbar = () => {
 			<div className={`nav__container ${activeOpacity && 'fixed'}`}>
 				<nav className="nav">
 					<figure className="nav__logo">
-						<Link to="/" onClick={handleBtnLogo}>
-							<img
-								src="../assets/logos/logo-white2.png"
-								alt="Logo"
-								className="nav__logo-img"
-							/>
-						</Link>
+						<img
+							src="../assets/logos/logo-white2.png"
+							alt="Logo"
+							className="nav__logo-img"
+							onClick={handleBtnLogo}
+						/>
 					</figure>
 
 					<form onSubmit={handleSearch} className="nav__search-desktop">
