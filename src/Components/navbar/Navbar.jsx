@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Link, NavLink, useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
 
 import { NavLogout } from './NavLogout';
@@ -69,13 +69,20 @@ export const Navbar = () => {
 		setBtnSearch(false);
 		setActiveOpacity(false);
 	};
+
+	const handleBtnLogo = () => {
+		setBtnMenu(false);
+		setBtnSearch(false);
+		setActiveOpacity(false);
+	};
+
 	return (
 		<>
 			<div className={`${activeOpacity && 'block-relleno'}`}></div>
 			<div className={`nav__container ${activeOpacity && 'fixed'}`}>
 				<nav className="nav">
 					<figure className="nav__logo">
-						<Link to="/">
+						<Link to="/" onClick={handleBtnLogo}>
 							<img
 								src="../assets/logos/logo-white2.png"
 								alt="Logo"
@@ -89,11 +96,11 @@ export const Navbar = () => {
 						<span className="btn__search-text">Buscar</span>
 					</button>
 
-					<NavLink to="/cart" className="nav__btn-store">
+					<Link to="/cart" className="nav__btn-store">
 						<span className="store__indicator">{sumarItems}</span>
 						<i className="fas fa-cart-plus"></i>
 						<span className="nav__store-car">Carrito</span>
-					</NavLink>
+					</Link>
 
 					<NavLogout />
 
