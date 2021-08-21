@@ -1,6 +1,6 @@
 .filter {
 	width: 100%;
-	display: flex;
+	display: block; /**/
 
 	.filter__type {
 		width: 50%;
@@ -26,9 +26,9 @@
 		.type__menu-black {
 			background-color: rgba(0, 0, 0, 0.3);
 			width: 100%;
-			position: fixed;
+			position: static; /**/
 			top: 0;
-			display: none;
+			display: block; /**/
 
 			.type__menu {
 				width: 50%;
@@ -83,7 +83,7 @@
 		height: 3rem;
 		background-color: #ffff;
 		font-size: 1.4rem;
-		display: flex;
+		display: none; /**/
 		align-items: center;
 		padding-left: 1rem;
 		margin-bottom: 3px;

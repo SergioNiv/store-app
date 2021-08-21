@@ -34,8 +34,8 @@ export const Navbar = () => {
 		}
 		dispatch(filterSearchMenu(name));
 		history.push(`/search/${name}`);
-		setActiveOpacity(!activeOpacity);
-		setBtnSearch(!btnSearch);
+		setActiveOpacity(false);
+		setBtnSearch(false);
 		reset();
 	};
 
@@ -102,7 +102,7 @@ export const Navbar = () => {
 								value={name}
 								onChange={handleInputChange}
 							/>
-							<i className="fas fa-search"></i>
+							<i className="fas fa-search" onClick={handleSearch}></i>
 						</div>
 					</form>
 

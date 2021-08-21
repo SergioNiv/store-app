@@ -37,8 +37,6 @@
 			align-items: center;
 			font-size: 1.4rem;
 
-			/**/
-
 			.nav__search-container__desktop {
 				width: 100%;
 				background-color: #fff;
@@ -67,11 +65,10 @@
 		.nav__btn-search {
 			width: 18%;
 			border: none;
-			padding: 0;
-			margin: 0;
 			background-color: $red-off;
 			color: #ffff;
 			border-right: 1px solid #fff;
+			border-left: 1px solid #fff;
 			cursor: pointer;
 			display: flex;
 			justify-content: center;
@@ -85,7 +82,6 @@
 			.btn__search-text {
 				text-align: center;
 				margin-top: 8px;
-				width: 50%;
 				display: block;
 				font-weight: 600;
 				font-size: 1.1rem;
@@ -124,7 +120,6 @@
 			.nav__store-car {
 				text-align: center;
 				margin-top: 8px;
-				width: 50%;
 				display: block;
 				font-weight: 600;
 				font-size: 1.1rem;
@@ -156,13 +151,12 @@
 		.nav__categories {
 			width: 11%;
 			position: relative;
-			height: 8rem;
+			height: 7.8rem;
 			color: #ffff;
 
 			.nav__cat-text {
 				width: 50%;
 				margin-top: 8px;
-				display: flex;
 				font-weight: 600;
 				justify-content: center;
 				align-items: center;
