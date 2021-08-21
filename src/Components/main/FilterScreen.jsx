@@ -22,7 +22,9 @@ export const FilterScreen = () => {
 		<div className="filter">
 			<div className="filter__type">
 				<div onClick={handleActiveFilter} className="type__title-container">
-					<span className="type__title">Filtrar</span>
+					<span className="type__title">
+						<i className="fas fa-filter"></i>Filtrar
+					</span>
 				</div>
 				<div
 					className={`type__menu-black ${filterState && 'activeFilterType'}`}
@@ -225,7 +227,9 @@ export const FilterScreen = () => {
 			</div>
 			<div className="filter__order">
 				<div onClick={handleActiveOrder} className="order__title-container">
-					<span className="order__title">Ordenar</span>
+					<span className="order__title">
+						<i className="fas fa-sort"></i>Ordenar
+					</span>
 				</div>
 				<div
 					className={`order__menu-black ${orderState && 'activeFilterType'}`}

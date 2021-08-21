@@ -1,9 +1,9 @@
 .filter {
-	width: 100%;
+	width: 20%; /**/
 	display: block; /**/
 
 	.filter__type {
-		width: 50%;
+		width: 100%; /**/
 
 		.type__title-container {
 			width: 100%;
@@ -13,7 +13,7 @@
 			align-items: center;
 
 			.type__title {
-				width: 95%;
+				width: 100%; /**/
 				height: 80%;
 				display: block;
 				background-color: chocolate;
@@ -31,8 +31,8 @@
 			display: block; /**/
 
 			.type__menu {
-				width: 50%;
-				height: 100vh;
+				width: 100%; /**/
+				height: auto; /**/
 				background-color: $white-off;
 				list-style: none;
 				padding: 0;
@@ -92,21 +92,20 @@
 	}
 
 	.filter__order {
-		width: 50%;
+		width: 100%; /**/
 
 		.order__title-container {
 			width: 100%;
 			height: 4rem;
-			display: flex;
+			display: none; /**/
 			justify-content: center;
 			align-items: center;
 
 			.order__title {
 				width: 95%;
 				height: 80%;
-				display: block;
 				background-color: chocolate;
-				display: flex;
+				display: none; /**/
 				justify-content: center;
 				align-items: center;
 				background-color: #ffff;
@@ -116,15 +115,15 @@
 		.order__menu-black {
 			background-color: rgba(0, 0, 0, 0.3);
 			width: 100%;
-			position: fixed;
+			position: static; /**/
 			top: 0;
 			left: 0;
-			display: none;
+			display: block; /**/
 			justify-content: flex-end;
 
 			.order__menu {
-				width: 50%;
-				height: 100vh;
+				width: 100%; /**/
+				height: auto; /**/
 				background-color: $white-off;
 				list-style: none;
 				padding: 0;
