@@ -11,6 +11,11 @@ $red_ligth: lighten(
 	$amount: 10,
 );
 
+$red_ligth-5: lighten(
+	$color: $red-off,
+	$amount: 5,
+);
+
 html {
 	font-size: 62.5%;
 }

@@ -120,10 +120,6 @@ export const Navbar = () => {
 					<NavLogout />
 
 					<div className="nav__categories">
-						<span className="nav__cat-text" onClick={handleBtnMenu}>
-							Categorías
-						</span>
-
 						<div className="btn__menu" onClick={handleBtnMenu}>
 							<div className="menu-activador">
 								<div className={`menu__ancla ${btnMenu && 'menu-abierto'}`}>
@@ -132,6 +128,9 @@ export const Navbar = () => {
 									<span className="menu-activador-linea"></span>
 								</div>
 							</div>
+							<span className="nav__cat-text" onClick={handleBtnMenu}>
+								Categorías
+							</span>
 						</div>
 
 						<div className={`nav__menu ${btnMenu && 'activeMenu'}`}>
