@@ -1,5 +1,5 @@
 .search__alert {
-	width: 90%;
+	width: 80%;
 	margin: 0 auto;
 	display: flex;
 	align-items: center;
@@ -29,8 +29,15 @@
 	}
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
+	.container__result-clothes {
+		display: flex;
+		width: 100%;
+		margin: 0 auto;
+		max-width: 1240px;
+	}
 	.grid__container {
+		width: 80%;
 		grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
 	}
 }

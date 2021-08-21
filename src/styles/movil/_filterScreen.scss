@@ -11,11 +11,12 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			margin-top: 5px;
+			cursor: pointer;
 
 			.type__title {
 				width: 95%;
-				height: 80%;
-				display: block;
+				height: 95%;
 				background-color: chocolate;
 				display: flex;
 				justify-content: center;
@@ -35,15 +36,15 @@
 			position: fixed;
 			top: 0;
 			display: none;
+			cursor: pointer;
 
 			.type__menu {
 				width: 50%;
 				height: 100vh;
 				background-color: $white-off;
 				list-style: none;
-				padding: 0;
-				margin: 0;
 				overflow: hidden;
+				cursor: pointer;
 
 				.details__container {
 					width: 100%;
@@ -58,7 +59,8 @@
 						align-items: center;
 						padding-left: 1rem;
 						margin-bottom: 3px;
-						border: 3px solid $white-off;
+						border-top: 3px solid $white-off;
+						border-bottom: 3px solid $white-off;
 					}
 					.type__submenu {
 						width: 100%;
@@ -106,11 +108,12 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			margin-top: 5px;
+			cursor: pointer;
 
 			.order__title {
 				width: 95%;
-				height: 80%;
-				display: block;
+				height: 95%;
 				background-color: chocolate;
 				display: flex;
 				justify-content: center;
@@ -132,15 +135,15 @@
 			left: 0;
 			display: none;
 			justify-content: flex-end;
+			cursor: pointer;
 
 			.order__menu {
 				width: 50%;
 				height: 100vh;
 				background-color: $white-off;
 				list-style: none;
-				padding: 0;
-				margin: 0;
 				overflow: hidden;
+				cursor: pointer;
 
 				.details__container {
 					width: 100%;
@@ -155,7 +158,8 @@
 						align-items: center;
 						padding-left: 1rem;
 						margin-bottom: 3px;
-						border: 3px solid $white-off;
+						border-top: 3px solid $white-off;
+						border-bottom: 3px solid $white-off;
 					}
 					.order__submenu {
 						width: 100%;

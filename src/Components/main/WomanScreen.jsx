@@ -10,7 +10,7 @@ export const WomanScreen = () => {
 		dispatch(filterClothesByGender('mujer'));
 	}, [dispatch]);
 	return (
-		<div>
+		<div className="container__result-clothes">
 			<FilterScreen />
 			<ClothesList />
 		</div>

@@ -1,77 +1,25 @@
 .filter {
-	width: 20%; /**/
+	width: 18%; /**/
 	display: block; /**/
+	/* position: fixed;
+	top: 7.8rem; */
 
 	.filter__type {
 		width: 100%; /**/
 
 		.type__title-container {
-			width: 100%;
-			height: 4rem;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
+			cursor: default;
 			.type__title {
 				width: 100%; /**/
-				height: 80%;
-				display: block;
-				background-color: chocolate;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				background-color: #ffff;
 			}
 		}
 		.type__menu-black {
-			background-color: rgba(0, 0, 0, 0.3);
-			width: 100%;
 			position: static; /**/
-			top: 0;
 			display: block; /**/
 
 			.type__menu {
 				width: 100%; /**/
 				height: auto; /**/
-				background-color: $white-off;
-				list-style: none;
-				padding: 0;
-				margin: 0;
-				overflow: hidden;
-
-				.details__container {
-					width: 100%;
-
-					.type__menu-link {
-						width: 100%;
-						display: block;
-						height: 3rem;
-						background-color: #ffff;
-						font-size: 1.4rem;
-						display: flex;
-						align-items: center;
-						padding-left: 1rem;
-						margin-bottom: 3px;
-						border: 3px solid $white-off;
-					}
-					.type__submenu {
-						width: 100%;
-						list-style: none;
-						background-color: #ffff;
-						padding: 0;
-						margin: 0;
-
-						.type__submenu-link {
-							display: block;
-							width: 100%;
-							height: 3rem;
-							display: flex;
-							align-items: center;
-							font-size: 1.2rem;
-							padding-left: 3rem;
-						}
-					}
-				}
 			}
 		}
 		.activeFilterType {
@@ -79,94 +27,24 @@
 		}
 	}
 	.btn__back {
-		width: 100%;
-		height: 3rem;
-		background-color: #ffff;
-		font-size: 1.4rem;
 		display: none; /**/
-		align-items: center;
-		padding-left: 1rem;
-		margin-bottom: 3px;
-		border: 3px solid $white-off;
-		font-weight: 800;
 	}
 
 	.filter__order {
 		width: 100%; /**/
 
 		.order__title-container {
-			width: 100%;
-			height: 4rem;
 			display: none; /**/
-			justify-content: center;
-			align-items: center;
-
-			.order__title {
-				width: 95%;
-				height: 80%;
-				background-color: chocolate;
-				display: none; /**/
-				justify-content: center;
-				align-items: center;
-				background-color: #ffff;
-			}
 		}
 
 		.order__menu-black {
-			background-color: rgba(0, 0, 0, 0.3);
-			width: 100%;
 			position: static; /**/
-			top: 0;
-			left: 0;
 			display: block; /**/
-			justify-content: flex-end;
 
 			.order__menu {
 				width: 100%; /**/
 				height: auto; /**/
-				background-color: $white-off;
-				list-style: none;
-				padding: 0;
-				margin: 0;
-				overflow: hidden;
-
-				.details__container {
-					width: 100%;
-
-					.order__menu-link {
-						width: 100%;
-						display: block;
-						height: 3rem;
-						background-color: #ffff;
-						font-size: 1.4rem;
-						display: flex;
-						align-items: center;
-						padding-left: 1rem;
-						margin-bottom: 3px;
-						border: 3px solid $white-off;
-					}
-					.order__submenu {
-						width: 100%;
-						list-style: none;
-						padding: 0;
-						margin: 0;
-						background-color: #ffff;
-
-						.order__submenu-link {
-							display: block;
-							width: 100%;
-							height: 3rem;
-							display: flex;
-							align-items: center;
-							font-size: 1.2rem;
-							padding-left: 3rem;
-						}
-					}
-				}
 			}
-		}
-		.activeFilterType {
-			display: flex;
 		}
 	}
 }
