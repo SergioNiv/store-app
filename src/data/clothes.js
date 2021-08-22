@@ -599,4 +599,96 @@ export const clothes = [
 			},
 		],
 	},
+	{
+		id: '027',
+		name: 'Polo Manga Corta Mujer a Rayas Blanco Disney',
+		type: 'polo',
+		gender: 'mujer',
+		size: [
+			{
+				S28: 12,
+				M30: 10,
+				L32: 13,
+				XL34: 13,
+				XXL36: 2,
+			},
+		],
+		price: 39.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Polo',
+				color: 'Blanco',
+			},
+		],
+	},
+	{
+		id: '028',
+		name: 'Polo Manga Corta Mujer Blanco Disney',
+		type: 'polo',
+		gender: 'mujer',
+		size: [
+			{
+				S28: 12,
+				M30: 10,
+				L32: 13,
+				XL34: 13,
+				XXL36: 2,
+			},
+		],
+		price: 39.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Polo',
+				color: 'Blanco',
+			},
+		],
+	},
+	{
+		id: '029',
+		name: 'Polo Manga Corta Mujer Blanco Disney',
+		type: 'polo',
+		gender: 'mujer',
+		size: [
+			{
+				S28: 12,
+				M30: 10,
+				L32: 13,
+				XL34: 13,
+				XXL36: 2,
+			},
+		],
+		price: 39.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Polo',
+				color: 'Blanco',
+			},
+		],
+	},
+	{
+		id: '030',
+		name: 'Polo Manga Corta Mujer Verde Disney',
+		type: 'polo',
+		gender: 'mujer',
+		size: [
+			{
+				S28: 1,
+				M30: 8,
+				L32: 13,
+				XL34: 13,
+				XXL36: 2,
+			},
+		],
+		price: 39.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Polo',
+				color: 'Verde',
+			},
+		],
+	},
 ];

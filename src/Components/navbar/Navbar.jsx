@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-
 import { Link, useHistory } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
-
 import { NavLogout } from './NavLogout';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterSearchMenu } from '../../actions/filter';
@@ -41,6 +39,7 @@ export const Navbar = () => {
 	const handleSubmitSearchForDesktop = () => {
 		//TODO: implementar una ayuda en el buscador
 		setBtnMenu(false);
+		setActiveOpacity(false);
 		reset();
 	};
 
@@ -117,7 +116,14 @@ export const Navbar = () => {
 						<span className="btn__search-text">Buscar</span>
 					</button>
 
-					<Link to="/cart" className="nav__btn-store">
+					<Link
+						to="/cart"
+						className="nav__btn-store"
+						onClick={() => {
+							setBtnMenu(false);
+							setActiveOpacity(false);
+						}}
+					>
 						<span className="store__indicator">{sumarItems}</span>
 						<i className="fas fa-cart-plus"></i>
 						<span className="nav__store-car">Carrito</span>

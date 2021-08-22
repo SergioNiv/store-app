@@ -55,7 +55,7 @@ export const RegisterScreen = ({ history }) => {
 
 	return (
 		<>
-			<h3 className="auth__title">Register</h3>
+			<h3 className="auth__title">Registrarse</h3>
 			{msgError && <div className="auth__alert-error">{msgError}</div>}
 			<form onSubmit={handleRegister}>
 				<div className=""></div>
@@ -98,11 +98,11 @@ export const RegisterScreen = ({ history }) => {
 				/>
 
 				<button type="submit" className="btn mb-20">
-					Register
+					Registrarse
 				</button>
 
 				<Link to="/auth/login" className="link">
-					Already registered?
+					¿Ya registrado?
 				</Link>
 			</form>
 		</>

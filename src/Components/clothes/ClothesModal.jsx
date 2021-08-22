@@ -26,7 +26,7 @@ export const ClothesModal = ({ openModal, setOpenModal, content }) => {
 			<h5 className="modal__title">Se agregró al carrito</h5>
 			<p className="modal__resumen">Resumen de compra:</p>
 			<div className="item__cart">
-				<div className="container__cart">
+				<div className="container__cart mb-10">
 					<figure className="item__img-container">
 						<img
 							className="item__cart-img"

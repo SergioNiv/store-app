@@ -20,6 +20,8 @@
 		position: relative;
 		margin: 0 auto;
 		height: 14rem;
+		text-decoration: none;
+		color: $black;
 
 		.item__img-container {
 			width: 25%;
@@ -73,6 +75,11 @@
 			}
 		}
 	}
+
+	.mb-10 {
+		margin-bottom: 1rem;
+	}
+
 	@media (min-width: 500px) {
 		.container__cart {
 			height: 20rem;

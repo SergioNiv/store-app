@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import {
 	cartDeleteItem,
 	decrementPriceTotal,
@@ -23,7 +24,7 @@ export const ItemCart = ({ name, sizeSelect, price, id, items }) => {
 
 	return (
 		<div className="item__cart">
-			<div className="container__cart">
+			<Link to={`/details/${id}`} className="container__cart">
 				<figure className="item__img-container">
 					<span className="cart__indicator">{items}</span>
 					<img
@@ -38,7 +39,7 @@ export const ItemCart = ({ name, sizeSelect, price, id, items }) => {
 					<span className="item__shipping">Envío a domicilio</span>
 					<span className="item__price">s./ {price.toFixed(2)}</span>
 				</div>
-			</div>
+			</Link>
 
 			<div className="buttons__add-delete">
 				<div className="cart__btn-delete">

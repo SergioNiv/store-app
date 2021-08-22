@@ -1,7 +1,20 @@
 import React from 'react';
 import Carousel from 'nuka-carousel';
+import { useHistory } from 'react-router-dom';
 
 export const CarouselPortada = () => {
+	const history = useHistory();
+
+	const handleClickFeatured = () => {
+		history.push(`/search/disney`);
+	};
+
+	const handleClickWoman = () => {
+		history.push('/woman');
+	};
+	const handleClickMan = () => {
+		history.push('/man');
+	};
 	return (
 		<Carousel
 			autoplay={true}
@@ -31,21 +44,21 @@ export const CarouselPortada = () => {
 			}}
 			className="carousel"
 		>
-			<figure className="carousel__container-img">
+			<figure className="carousel__container-img" onClick={handleClickFeatured}>
 				<img
 					src="../assets/portada/disney.gif"
 					alt="disney-portada"
 					className="carousel__img"
 				/>
 			</figure>
-			<figure className="carousel__container-img">
+			<figure className="carousel__container-img" onClick={handleClickWoman}>
 				<img
 					src="../assets/portada/bannerClothes.png"
 					alt="clothes-portada"
 					className="carousel__img"
 				/>
 			</figure>
-			<figure className="carousel__container-img">
+			<figure className="carousel__container-img" onClick={handleClickMan}>
 				<img
 					src="../assets/portada/bannerMan.png"
 					alt="shop-portada"

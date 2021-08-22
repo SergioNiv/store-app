@@ -21,12 +21,23 @@
 	}
 }
 
+@media (min-width: 800px) {
+	.auth__main {
+		flex-direction: row;
+
+		.auth__container-logo {
+			margin: 0 4rem;
+		}
+	}
+}
+
 .auth__box-container {
 	background-color: white;
 	box-shadow: 0px 3px $black-soft;
 	border-radius: 2px;
 	padding: 20px;
 	width: 250px;
+	margin: 0 4rem;
 }
 
 .auth__title {
@@ -63,6 +74,7 @@
 	transition: color 0.3s ease;
 	border-radius: 6px;
 	margin-top: 1.5rem;
+	transition: all 0.3s;
 
 	&:focus {
 		outline: none;
@@ -72,8 +84,8 @@
 	}
 
 	&:hover {
-		color: darken($color: white, $amount: 10);
-		background-color: darken($color: $red-off, $amount: 15);
+		color: #fff;
+		background-color: $red_ligth-5;
 	}
 }
 
@@ -150,7 +162,7 @@
 	margin-bottom: 20px;
 }
 
-//loading
+//loader ****************************************
 
 .loader,
 .loader:before,
