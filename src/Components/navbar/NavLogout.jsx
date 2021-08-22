@@ -6,7 +6,7 @@ import { clothesLogoutCleaning } from '../../actions/filter';
 import { isLoggedEnd } from '../../actions/ui';
 
 export const NavLogout = () => {
-	const { name } = useSelector((state) => state.ui);
+	const { name } = useSelector((state) => state.auth);
 
 	const dispatch = useDispatch();
 

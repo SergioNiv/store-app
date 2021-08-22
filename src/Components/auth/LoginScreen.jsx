@@ -40,7 +40,7 @@ export const LoginScreen = ({ history }) => {
 	}, [isLoggedIn, history, lastPath]);
 
 	return (
-		<>
+		<div className="animate__animated animate__fadeIn animate__faster-3s">
 			<h3 className="auth__title">Acceso</h3>
 
 			<form onSubmit={handleLogin}>
@@ -85,9 +85,13 @@ export const LoginScreen = ({ history }) => {
 				</div>
 
 				<Link to="/auth/register" className="link">
-					Crear una nueva cuenta
+					Crear nueva cuenta
+				</Link>
+
+				<Link to="/" className="continue">
+					Continuar sin iniciar sesión
 				</Link>
 			</form>
-		</>
+		</div>
 	);
 };

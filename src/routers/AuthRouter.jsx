@@ -6,7 +6,7 @@ import { RegisterScreen } from '../Components/auth/RegisterScreen';
 export const AuthRouter = () => {
 	return (
 		<div className="auth__main">
-			<figure className="auth__container-logo">
+			<figure className="auth__container-logo animate__animated animate__fadeIn animate__faster-3s">
 				<img
 					className="auth__img"
 					src="../assets/logos/logo-login-white.png"

@@ -27,7 +27,7 @@ export const ShoppingCartScreen = ({ history }) => {
 	};
 
 	return (
-		<>
+		<div className="animate__animated animate__fadeIn animate__faster-3s">
 			<div className="cart__container">
 				<div
 					className={`cart__resumen ${
@@ -86,6 +86,6 @@ export const ShoppingCartScreen = ({ history }) => {
 					Seguir comprando
 				</Link>
 			</div>
-		</>
+		</div>
 	);
 };

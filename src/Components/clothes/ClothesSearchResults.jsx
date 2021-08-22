@@ -15,7 +15,7 @@ export const ClothesSearchResults = () => {
 		dispatch(filterSearchMenu(name));
 	}, [name, dispatch]);
 	return (
-		<div className="container__result-clothes">
+		<div className="container__result-clothes animate__animated animate__fadeIn animate__faster-3s">
 			<FilterScreen />
 			{name !== '' && clothes.length === 0 && (
 				<div className="search__alert">No se encontró "{name}"</div>

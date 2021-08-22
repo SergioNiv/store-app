@@ -17,7 +17,7 @@ export const ClothesList = () => {
 				<div className="search__alert">" No se encontró ningún elemento "</div>
 			)}
 			{clothes.length !== 0 && (
-				<div className="grid__container">
+				<div className="grid__container animate__animated animate__fadeIn animate__faster">
 					{clothes.map((clot) => (
 						<ClothesCard key={clot.id} {...clot} />
 					))}

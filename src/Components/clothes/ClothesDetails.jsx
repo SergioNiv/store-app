@@ -43,7 +43,7 @@ export const ClothesDetails = () => {
 		return <Redirect to="/" />;
 	}
 	return (
-		<div className="details__container">
+		<div className="details__container animate__animated animate__fadeIn animate__faster-3s">
 			<figure className="details__container-img">
 				<img
 					className="details__img"

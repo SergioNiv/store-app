@@ -18,10 +18,10 @@ export const RegisterScreen = ({ history }) => {
 	}, [isLoggedIn, history]);
 
 	const [formValue, handleInputchange] = useForm({
-		name: 'Mayra Quiche',
-		email: 'prueba-mayra@gmail.com',
-		password: 'Devdabot123',
-		password2: 'Devdabot123',
+		name: '',
+		email: '',
+		password: '',
+		password2: '',
 	});
 
 	const { name, email, password, password2 } = formValue;
@@ -54,11 +54,10 @@ export const RegisterScreen = ({ history }) => {
 	};
 
 	return (
-		<>
+		<div className="animate__animated animate__fadeIn animate__faster-3s">
 			<h3 className="auth__title">Registrarse</h3>
 			{msgError && <div className="auth__alert-error">{msgError}</div>}
 			<form onSubmit={handleRegister}>
-				<div className=""></div>
 				<input
 					type="text"
 					placeholder="Name"
@@ -105,6 +104,6 @@ export const RegisterScreen = ({ history }) => {
 					¿Ya registrado?
 				</Link>
 			</form>
-		</>
+		</div>
 	);
 };

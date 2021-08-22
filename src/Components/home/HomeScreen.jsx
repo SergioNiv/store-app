@@ -8,7 +8,7 @@ export const HomeScreen = () => {
 		window.scrollTo(0, 0);
 	}, []);
 	return (
-		<div>
+		<div className="animate__animated animate__fadeIn animate__faster-3s">
 			<CarouselPortada />
 			<CarouselFeatured />
 		</div>

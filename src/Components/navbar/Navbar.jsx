@@ -145,7 +145,11 @@ export const Navbar = () => {
 							</span>
 						</div>
 
-						<div className={`nav__menu ${btnMenu && 'activeMenu'}`}>
+						<div
+							className={`nav__menu animate__animated animate__fadeIn animate__faster-3s ${
+								btnMenu && 'activeMenu'
+							}`}
+						>
 							<Link
 								to="/woman"
 								onClick={handleBtnWoman}
@@ -184,7 +188,9 @@ export const Navbar = () => {
 				</form>
 			</div>
 			<div
-				className={`${activeOpacity && 'opacity'}`}
+				className={`animate__animated animate__fadeIn animate__faster-3s ${
+					activeOpacity && 'opacity'
+				}`}
 				onClick={handleOpacity}
 			></div>
 		</>

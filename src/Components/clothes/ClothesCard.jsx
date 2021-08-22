@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 
 export const ClothesCard = ({ id, name, price }) => {
 	return (
-		<Link to={`/details/${id}`} className="card">
+		<Link
+			to={`/details/${id}`}
+			className="card animate__animated animate__fadeIn animate__faster-3s"
+		>
 			<figure className="card__container-img">
 				<img
 					className="card__img"
