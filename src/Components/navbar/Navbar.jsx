@@ -27,7 +27,7 @@ export const Navbar = () => {
 		behavior: 'smooth',
 	});
  */
-	const handleSearch = (e) => {
+	const handleSubmitSearch = (e) => {
 		e.preventDefault();
 		if (name.trim().length < 1) {
 			return;
@@ -36,6 +36,11 @@ export const Navbar = () => {
 		history.push(`/search/${name}`);
 		setActiveOpacity(false);
 		setBtnSearch(false);
+		reset();
+	};
+	const handleSubmitSearchForDesktop = () => {
+		//TODO: implementar una ayuda en el buscador
+		setBtnMenu(false);
 		reset();
 	};
 
@@ -91,7 +96,7 @@ export const Navbar = () => {
 						/>
 					</figure>
 
-					<form onSubmit={handleSearch} className="nav__search-desktop">
+					<form onSubmit={handleSubmitSearch} className="nav__search-desktop">
 						<div className="nav__search-container__desktop">
 							<input
 								className="nav__search-input__desktop"
@@ -101,8 +106,9 @@ export const Navbar = () => {
 								name="name"
 								value={name}
 								onChange={handleInputChange}
+								onClick={handleSubmitSearchForDesktop}
 							/>
-							<i className="fas fa-search" onClick={handleSearch}></i>
+							<i className="fas fa-search" onClick={handleSubmitSearch}></i>
 						</div>
 					</form>
 
@@ -155,7 +161,7 @@ export const Navbar = () => {
 				</nav>
 
 				<form
-					onSubmit={handleSearch}
+					onSubmit={handleSubmitSearch}
 					className={`nav__search ${btnSearch && 'activeSearch'}`}
 				>
 					<div className="nav__search-container">

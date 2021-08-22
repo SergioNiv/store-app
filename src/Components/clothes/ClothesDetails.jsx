@@ -147,6 +147,10 @@ export const ClothesDetails = () => {
 					</ul>
 				</div>
 
+				<button className="btn__back" onClick={handleReturn}>
+					Volver
+				</button>
+
 				{sizeActive ? (
 					<button className="btn__add-car" onClick={handleAddNewCard}>
 						Agregar al carrito
@@ -154,10 +158,6 @@ export const ClothesDetails = () => {
 				) : (
 					<button className="btn__add-car disabled">Elige tu talla</button>
 				)}
-
-				<button className="btn__back" onClick={handleReturn}>
-					Volver
-				</button>
 			</div>
 			<ClothesModal
 				openModal={openModal}

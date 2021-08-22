@@ -47,8 +47,8 @@ export const clothes = [
 	},
 	{
 		id: '003',
-		name: 'Blusa Manga Corta de Mujer Amarillo',
-		type: 'blusas',
+		name: 'Polo Manga Corta de Mujer Amarillo',
+		type: 'polo',
 		gender: 'mujer',
 		size: [
 			{
@@ -63,7 +63,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				typec: 'Blusa',
+				typec: 'polo',
 				color: 'Amarillo',
 			},
 		],
@@ -347,7 +347,7 @@ export const clothes = [
 
 	{
 		id: '016',
-		name: 'Sueter Manga Larga Hombre Café',
+		name: 'Sueter Manga Larga Hombre Blanco',
 		type: 'sueter',
 		gender: 'hombre',
 		size: [
@@ -364,7 +364,7 @@ export const clothes = [
 			{
 				material: 'Algodón',
 				typec: 'Sueter',
-				color: 'Café',
+				color: 'Blanco',
 			},
 		],
 	},

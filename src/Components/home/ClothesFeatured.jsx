@@ -12,6 +12,9 @@ export const ClothesFeatured = ({ id, name, price }) => {
 				/>
 			</figure>
 			<div className="card__featured-text">
+				<span className="card__featured-name__800px">
+					{name.length > 36 ? name.slice(0, 36) + '...' : name}
+				</span>
 				<span className="card__featured-name">
 					{name.length > 24 ? name.slice(0, 24) + '...' : name}
 				</span>

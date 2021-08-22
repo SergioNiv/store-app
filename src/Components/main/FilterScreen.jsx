@@ -35,7 +35,7 @@ export const FilterScreen = () => {
 							<button onClick={handleActiveFilter} className="btn__back">
 								Atrás
 							</button>
-							<details className="details__container" open>
+							<details className="filter__details-container" open>
 								<summary className="type__menu-link">Tipo</summary>
 								<ul className="type__submenu">
 									<li
@@ -119,7 +119,7 @@ export const FilterScreen = () => {
 								</ul>
 							</details>
 
-							<details className="details__container" open>
+							<details className="filter__details-container" open>
 								<summary className="type__menu-link">Color</summary>
 								<ul className="type__submenu">
 									<li
@@ -244,7 +244,7 @@ export const FilterScreen = () => {
 							<button onClick={handleActiveOrder} className="btn__back">
 								Atrás
 							</button>
-							<details className="details__container" open>
+							<details className="filter__details-container" open>
 								<summary className="order__menu-link">Por precio</summary>
 								<ul className="order__submenu">
 									<li

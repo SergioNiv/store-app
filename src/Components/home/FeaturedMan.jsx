@@ -10,7 +10,7 @@ export const FeaturedMan = ({ gender }) => {
 
 	const clothesManFisrt = clothes.filter(
 		(clothes) =>
-			clothes.id === '019' || clothes.id === '021' || clothes.id === '025'
+			clothes.id === '019' || clothes.id === '017' || clothes.id === '025'
 	);
 
 	const clothesManSecond = clothes.filter(
@@ -39,12 +39,12 @@ export const FeaturedMan = ({ gender }) => {
 			)} */
 				renderCenterLeftControls={({ previousSlide }) => (
 					<button onClick={previousSlide} className="carousel__btn-featured">
-						<i className="fas fa-chevron-left btn__arrow-featured"></i>
+						<i className="fas fa-chevron-left"></i>
 					</button>
 				)}
 				renderCenterRightControls={({ nextSlide }) => (
 					<button onClick={nextSlide} className="carousel__btn-featured">
-						<i className="fas fa-chevron-right btn__arrow-featured"></i>
+						<i className="fas fa-chevron-right"></i>
 					</button>
 				)}
 				defaultControlsConfig={{
