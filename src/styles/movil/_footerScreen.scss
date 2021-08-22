@@ -53,10 +53,12 @@
 		width: 100%;
 		background-color: darken($color: $red-off, $amount: 16);
 		margin-top: 2rem;
+
 		.footer__reserved {
 			padding-top: 1.5rem;
 			font-size: 1.2rem;
 		}
+
 		.footer__condicion {
 			width: 95%;
 			padding: 0.3rem 0;
@@ -69,4 +71,9 @@
 .relleno__bottom {
 	width: 100%;
 	height: 6rem;
+}
+@media (min-width: 800px) {
+	.relleno__bottom {
+		display: none;
+	}
 }

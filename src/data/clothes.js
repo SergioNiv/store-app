@@ -24,7 +24,7 @@ export const clothes = [
 	},
 	{
 		id: '002',
-		name: 'Blusa Manga Corta de Mujer Negro',
+		name: 'Polo Manga Corta de Mujer Negro',
 		type: 'blusas',
 		gender: 'mujer',
 		size: [
@@ -40,7 +40,7 @@ export const clothes = [
 		characters: [
 			{
 				material: 'Algodón',
-				typec: 'Blusa',
+				typec: 'Polo',
 				color: 'Negro',
 			},
 		],
