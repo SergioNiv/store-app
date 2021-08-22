@@ -172,7 +172,9 @@ export const Navbar = () => {
 
 				<form
 					onSubmit={handleSubmitSearch}
-					className={`nav__search ${btnSearch && 'activeSearch'}`}
+					className={`nav__search animate__animated animate__fadeIn animate__faster-3s ${
+						btnSearch && 'activeSearch'
+					}`}
 				>
 					<div className="nav__search-container">
 						<input
