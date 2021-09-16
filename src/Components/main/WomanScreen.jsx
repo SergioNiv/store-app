@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { filterClothesByGender } from '../../actions/filter';
 import { ClothesList } from '../clothes/ClothesList';
@@ -10,9 +10,11 @@ export const WomanScreen = () => {
 		dispatch(filterClothesByGender('mujer'));
 	}, [dispatch]);
 	return (
-		<div className="container__result-clothes">
-			<FilterScreen />
-			<ClothesList />
-		</div>
+		<>
+			<div className="container__result-clothes">
+				<FilterScreen />
+				<ClothesList />
+			</div>
+		</>
 	);
 };
