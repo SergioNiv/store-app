@@ -3,6 +3,7 @@ import { types } from '../type/types';
 const initialstate = {
 	clothes: [],
 	gender: null,
+	page: Number(localStorage.getItem('pageState' || 1)),
 };
 
 export const filterReducer = (state = initialstate, action) => {
@@ -36,6 +37,16 @@ export const filterReducer = (state = initialstate, action) => {
 				...state,
 				clothes: action.payload,
 				gender: null,
+			};
+		case types.filterPaginationState:
+			return {
+				...state,
+				page: action.payload,
+			};
+		case types.filterResetPaginationState:
+			return {
+				...state,
+				page: 1,
 			};
 
 		default:

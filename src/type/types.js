@@ -15,6 +15,8 @@ export const types = {
 	filterByPrice: '[filter] Get clothes by price',
 	filterLogoutCleaning: '[filter] Clothes logout cleaning ',
 	filterSearchMenu: '[filter] Filter search menu ',
+	filterPaginationState: '[filter] Filter pagination state',
+	filterResetPaginationState: '[filter] Filter reset pagination state',
 
 	cartAddINewItem: '[cart] Add new item',
 	cartDeleteItem: '[cart] Delete item',

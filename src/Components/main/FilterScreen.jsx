@@ -5,6 +5,7 @@ import {
 	filterClothesByColor,
 	filterClothesByPrice,
 	filterClothesByType,
+	resetPageState,
 } from '../../actions/filter';
 
 export const FilterScreen = () => {
@@ -43,6 +44,8 @@ export const FilterScreen = () => {
 										onClick={() => {
 											gender && dispatch(filterClothesByType('polo', gender));
 											gender || history.push('/search/polo');
+											localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+											dispatch(resetPageState());
 										}}
 									>
 										Polo
@@ -52,6 +55,8 @@ export const FilterScreen = () => {
 										onClick={() => {
 											gender && dispatch(filterClothesByType('sueter', gender));
 											gender || history.push('/search/sueter');
+											localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+											dispatch(resetPageState());
 										}}
 									>
 										Sueter
@@ -62,6 +67,8 @@ export const FilterScreen = () => {
 											gender &&
 												dispatch(filterClothesByType('pantalones', gender));
 											gender || history.push('/search/pantalones');
+											localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+											dispatch(resetPageState());
 										}}
 									>
 										Pantalón
@@ -73,6 +80,8 @@ export const FilterScreen = () => {
 												gender &&
 													dispatch(filterClothesByType('blusas', gender));
 												gender || history.push('/search/blusas');
+												localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+												dispatch(resetPageState());
 											}}
 										>
 											Blusa
@@ -86,6 +95,8 @@ export const FilterScreen = () => {
 												gender &&
 													dispatch(filterClothesByType('camisa', gender));
 												gender || history.push('/search/camisa');
+												localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+												dispatch(resetPageState());
 											}}
 										>
 											Camisa
@@ -100,6 +111,8 @@ export const FilterScreen = () => {
 													gender &&
 														dispatch(filterClothesByType('blusas', gender));
 													gender || history.push('/search/blusas');
+													localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+													dispatch(resetPageState());
 												}}
 											>
 												Blusa
@@ -110,6 +123,8 @@ export const FilterScreen = () => {
 													gender &&
 														dispatch(filterClothesByType('camisa', gender));
 													gender || history.push('/search/camisa');
+													localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+													dispatch(resetPageState());
 												}}
 											>
 												Camisa
@@ -127,6 +142,8 @@ export const FilterScreen = () => {
 										onClick={() => {
 											gender && dispatch(filterClothesByColor('Negro', gender));
 											gender || history.push('/search/negro');
+											localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+											dispatch(resetPageState());
 										}}
 									>
 										Negro
@@ -137,6 +154,8 @@ export const FilterScreen = () => {
 											gender &&
 												dispatch(filterClothesByColor('Turquesa', gender));
 											gender || history.push('/search/turquesa');
+											localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+											dispatch(resetPageState());
 										}}
 									>
 										Turquesa
@@ -147,6 +166,8 @@ export const FilterScreen = () => {
 											gender &&
 												dispatch(filterClothesByColor('Amarillo', gender));
 											gender || history.push('/search/amarillo');
+											localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+											dispatch(resetPageState());
 										}}
 									>
 										Amarillo
@@ -157,6 +178,8 @@ export const FilterScreen = () => {
 											gender &&
 												dispatch(filterClothesByColor('Blanco', gender));
 											gender || history.push('/search/blanco');
+											localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+											dispatch(resetPageState());
 										}}
 									>
 										Blanco
@@ -167,6 +190,8 @@ export const FilterScreen = () => {
 											gender &&
 												dispatch(filterClothesByColor('Celeste', gender));
 											gender || history.push('/search/celeste');
+											localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+											dispatch(resetPageState());
 										}}
 									>
 										Celeste
@@ -176,6 +201,8 @@ export const FilterScreen = () => {
 										onClick={() => {
 											gender && dispatch(filterClothesByColor('Verde', gender));
 											gender || history.push('/search/verde');
+											localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+											dispatch(resetPageState());
 										}}
 									>
 										Verde
@@ -185,6 +212,8 @@ export const FilterScreen = () => {
 										onClick={() => {
 											gender && dispatch(filterClothesByColor('Azul', gender));
 											gender || history.push('/search/azul');
+											localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+											dispatch(resetPageState());
 										}}
 									>
 										Azul
@@ -194,6 +223,8 @@ export const FilterScreen = () => {
 										onClick={() => {
 											gender && dispatch(filterClothesByColor('Café', gender));
 											gender || history.push('/search/café');
+											localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+											dispatch(resetPageState());
 										}}
 									>
 										Café
@@ -203,6 +234,8 @@ export const FilterScreen = () => {
 										onClick={() => {
 											gender && dispatch(filterClothesByColor('Gris', gender));
 											gender || history.push('/search/gris');
+											localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+											dispatch(resetPageState());
 										}}
 									>
 										Gris
@@ -212,6 +245,8 @@ export const FilterScreen = () => {
 										onClick={() => {
 											gender && dispatch(filterClothesByColor('Rojo', gender));
 											gender || history.push('/search/rojo');
+											localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+											dispatch(resetPageState());
 										}}
 									>
 										Rojo
@@ -221,6 +256,8 @@ export const FilterScreen = () => {
 										onClick={() => {
 											gender && dispatch(filterClothesByColor('Piel', gender));
 											gender || history.push('/search/piel');
+											localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+											dispatch(resetPageState());
 										}}
 									>
 										Piel
@@ -249,17 +286,21 @@ export const FilterScreen = () => {
 								<ul className="order__submenu">
 									<li
 										className="order__submenu-link"
-										onClick={() =>
-											dispatch(filterClothesByPrice('ascendente', gender))
-										}
+										onClick={() => {
+											dispatch(filterClothesByPrice('ascendente', gender));
+											localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+											dispatch(resetPageState());
+										}}
 									>
 										Ascendente
 									</li>
 									<li
 										className="order__submenu-link"
-										onClick={() =>
-											dispatch(filterClothesByPrice('descendente', gender))
-										}
+										onClick={() => {
+											dispatch(filterClothesByPrice('descendente', gender));
+											localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+											dispatch(resetPageState());
+										}}
 									>
 										Descendente
 									</li>

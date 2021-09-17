@@ -3,7 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
 import { NavLogout } from './NavLogout';
 import { useDispatch, useSelector } from 'react-redux';
-import { filterSearchMenu } from '../../actions/filter';
+import { filterSearchMenu, resetPageState } from '../../actions/filter';
 
 export const Navbar = () => {
 	const [activeOpacity, setActiveOpacity] = useState(false);
@@ -35,6 +35,9 @@ export const Navbar = () => {
 		setActiveOpacity(false);
 		setBtnSearch(false);
 		reset();
+
+		localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+		dispatch(resetPageState());
 	};
 	const handleSubmitSearchForDesktop = () => {
 		//TODO: implementar una ayuda en el buscador
@@ -46,10 +49,14 @@ export const Navbar = () => {
 	const handleBtnMan = () => {
 		setBtnMenu(!btnMenu);
 		setActiveOpacity(!activeOpacity);
+		localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+		dispatch(resetPageState());
 	};
 	const handleBtnWoman = () => {
 		setBtnMenu(!btnMenu);
 		setActiveOpacity(!activeOpacity);
+		localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+		dispatch(resetPageState());
 	};
 
 	const handleBtnSearch = () => {

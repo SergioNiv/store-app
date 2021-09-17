@@ -1,12 +1,12 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { pageState, resetPageState } from '../../actions/filter';
 
-export const ClothesPaginationList = ({
-	page,
-	setPageState,
-	clothesScreen,
-	clothesTotal,
-}) => {
-	const pagesTotal = Math.ceil(clothesTotal / clothesScreen);
+export const ClothesPaginationList = ({ pagesTotal }) => {
+	const { page } = useSelector((state) => state.filter);
+
+	const dispatch = useDispatch();
 
 	const getBlocksPagination = () => {
 		const resultpages = [];
@@ -16,7 +16,7 @@ export const ClothesPaginationList = ({
 					key={i}
 					onClick={() => {
 						localStorage.setItem('pageState', i);
-						setPageState(i);
+						dispatch(pageState(i));
 					}}
 					className={`pagination__block ${page === i && 'activate'}`}
 				>
@@ -35,7 +35,7 @@ export const ClothesPaginationList = ({
 					onClick={() => {
 						if (page !== 1) {
 							localStorage.setItem('pageState', page - 1);
-							setPageState(page - 1);
+							dispatch(pageState(page - 1));
 						}
 					}}
 				>
@@ -49,8 +49,13 @@ export const ClothesPaginationList = ({
 				<span
 					className="pagination__increment"
 					onClick={() => {
-						localStorage.setItem('pageState', page + 1);
-						setPageState(page + 1);
+						if (page < pagesTotal) {
+							localStorage.setItem('pageState', page + 1);
+							dispatch(pageState(page + 1));
+						} else {
+							localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
+							dispatch(resetPageState());
+						}
 					}}
 				>
 					Siguiente<i className="fas fa-chevron-right"></i>

@@ -10,6 +10,7 @@ export const ManScreen = () => {
 	useEffect(() => {
 		dispatch(filterClothesByGender('hombre'));
 	}, [dispatch]);
+
 	return (
 		<div className="container__result-clothes">
 			<FilterScreen />

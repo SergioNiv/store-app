@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
@@ -8,9 +8,7 @@ import { ClothesPaginationList } from './ClothesPaginationList';
 export const ClothesList = () => {
 	const { clothes } = useSelector((state) => state.filter);
 
-	const pageStorage = Number(localStorage.getItem('pageState') || 1);
-
-	const [pageState, setPageState] = useState(pageStorage);
+	const { page } = useSelector((state) => state.filter);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -18,27 +16,16 @@ export const ClothesList = () => {
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
-	}, [pageState]);
+	}, [page]);
 
-	const clothesScreen = 12;
+	const clothesScreen = 8;
+
+	const pagesTotal = Math.ceil(clothes.length / clothesScreen); //total de páginas
 
 	const clothesData = clothes.slice(
-		(pageState - 1) * clothesScreen,
-		pageState * clothesScreen
+		(page - 1) * clothesScreen,
+		page * clothesScreen
 	);
-
-	//cambiar el estado al inicial al superar el número de bloques de paginación y no muestre información
-	useEffect(() => {
-		if (clothesData.length === 0) {
-			localStorage.setItem('pageState', 1);
-			setPageState(1);
-		}
-	}, [clothesData]);
-
-	useEffect(() => {
-		localStorage.setItem('pageState', 1);
-		setPageState(1);
-	}, [clothes]);
 
 	return (
 		<>
@@ -52,12 +39,7 @@ export const ClothesList = () => {
 							<ClothesCard key={clothes.id} {...clothes} />
 						))}
 					</div>
-					<ClothesPaginationList
-						page={pageState}
-						setPageState={setPageState}
-						clothesScreen={clothesScreen}
-						clothesTotal={clothes.length}
-					/>
+					<ClothesPaginationList pagesTotal={pagesTotal} />
 				</div>
 			)}
 		</>

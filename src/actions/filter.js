@@ -36,3 +36,12 @@ export const filterSearchMenu = (name) => ({
 	type: types.filterSearchMenu,
 	payload: getClothesByName(name),
 });
+
+export const pageState = (num) => ({
+	type: types.filterPaginationState,
+	payload: num,
+});
+
+export const resetPageState = () => ({
+	type: types.filterResetPaginationState,
+});
