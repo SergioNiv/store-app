@@ -7,5 +7,13 @@ export const getClothesByName = (name = '') => {
 
 	name = name.toLocaleLowerCase();
 
-	return clothes.filter((clot) => clot.name.toLocaleLowerCase().includes(name));
+	const listClothesByName = clothes.filter((clothes) =>
+		clothes.name.toLocaleLowerCase().includes(name)
+	);
+
+	if (listClothesByName.length === 0) {
+		return clothes.filter((clothes) => clothes.type === name);
+	}
+
+	return listClothesByName;
 };

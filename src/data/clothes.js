@@ -25,7 +25,7 @@ export const clothes = [
 	{
 		id: '002',
 		name: 'Polo Manga Corta de Mujer Negro',
-		type: 'blusas',
+		type: 'polos',
 		gender: 'mujer',
 		size: [
 			{
@@ -48,7 +48,7 @@ export const clothes = [
 	{
 		id: '003',
 		name: 'Polo Manga Corta de Mujer Amarillo',
-		type: 'polo',
+		type: 'polos',
 		gender: 'mujer',
 		size: [
 			{
@@ -232,7 +232,7 @@ export const clothes = [
 	{
 		id: '011',
 		name: 'Polo Manga Corta de Mujer Turquesa',
-		type: 'polo',
+		type: 'polos',
 		gender: 'mujer',
 		size: [
 			{
@@ -255,7 +255,7 @@ export const clothes = [
 	{
 		id: '012',
 		name: 'Polo Manga Corta de Mujer',
-		type: 'polo',
+		type: 'polos',
 		gender: 'mujer',
 		size: [
 			{
@@ -278,7 +278,7 @@ export const clothes = [
 	{
 		id: '013',
 		name: 'Polo Manga Corta de Mujer Snoopy Blanco',
-		type: 'polo',
+		type: 'polos',
 		gender: 'mujer',
 		size: [
 			{
@@ -301,7 +301,7 @@ export const clothes = [
 	{
 		id: '014',
 		name: 'Polo Manga Corta de Mujer Chicas Super Poderosas Blanco ',
-		type: 'polo',
+		type: 'polos',
 		gender: 'mujer',
 		size: [
 			{
@@ -324,7 +324,7 @@ export const clothes = [
 	{
 		id: '015',
 		name: 'Polo Manga Corta de Mujer Azul',
-		type: 'polo',
+		type: 'polos',
 		gender: 'mujer',
 		size: [
 			{
@@ -348,7 +348,7 @@ export const clothes = [
 	{
 		id: '016',
 		name: 'Sueter Manga Larga Hombre Blanco',
-		type: 'sueter',
+		type: 'sueteres',
 		gender: 'hombre',
 		size: [
 			{
@@ -371,7 +371,7 @@ export const clothes = [
 	{
 		id: '017',
 		name: 'Sueter Manga Larga Hombre Gris',
-		type: 'sueter',
+		type: 'sueteres',
 		gender: 'hombre',
 		size: [
 			{
@@ -394,7 +394,7 @@ export const clothes = [
 	{
 		id: '018',
 		name: 'Sueter Manga Larga Hombre Verde',
-		type: 'sueter',
+		type: 'sueteres',
 		gender: 'hombre',
 		size: [
 			{
@@ -510,7 +510,7 @@ export const clothes = [
 	{
 		id: '023',
 		name: 'Polo Manga Corta Hombre Rojo',
-		type: 'polo',
+		type: 'polos',
 		gender: 'hombre',
 		size: [
 			{
@@ -533,7 +533,7 @@ export const clothes = [
 	{
 		id: '024',
 		name: 'Polo Manga Corta Hombre Azul',
-		type: 'polo',
+		type: 'polos',
 		gender: 'hombre',
 		size: [
 			{
@@ -556,7 +556,7 @@ export const clothes = [
 	{
 		id: '025',
 		name: 'Polo Manga Corta Hombre Azul',
-		type: 'polo',
+		type: 'polos',
 		gender: 'hombre',
 		size: [
 			{
@@ -579,7 +579,7 @@ export const clothes = [
 	{
 		id: '026',
 		name: 'Polo Manga Corta Hombre Piel',
-		type: 'polo',
+		type: 'polos',
 		gender: 'hombre',
 		size: [
 			{
@@ -602,7 +602,7 @@ export const clothes = [
 	{
 		id: '027',
 		name: 'Polo Manga Corta Mujer a Rayas Blanco Disney',
-		type: 'polo',
+		type: 'polos',
 		gender: 'mujer',
 		size: [
 			{
@@ -625,7 +625,7 @@ export const clothes = [
 	{
 		id: '028',
 		name: 'Polo Manga Corta Mujer Blanco Disney',
-		type: 'polo',
+		type: 'polos',
 		gender: 'mujer',
 		size: [
 			{
@@ -648,7 +648,7 @@ export const clothes = [
 	{
 		id: '029',
 		name: 'Polo Manga Corta Mujer Blanco Disney',
-		type: 'polo',
+		type: 'polos',
 		gender: 'mujer',
 		size: [
 			{
@@ -671,7 +671,7 @@ export const clothes = [
 	{
 		id: '030',
 		name: 'Polo Manga Corta Mujer Verde Disney',
-		type: 'polo',
+		type: 'polos',
 		gender: 'mujer',
 		size: [
 			{
