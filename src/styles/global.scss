@@ -33,6 +33,19 @@ body {
 	color: $black;
 	box-sizing: border-box;
 }
+//diseño de scroll
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(249, 52, 73, 0.3);
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	box-shadow: inset 0 0 6px rgba(249, 52, 73, 10);
+}
 
 @import './movil.scss';
 @media (min-width: 800px) {

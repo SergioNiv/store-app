@@ -22,7 +22,7 @@ export const ClothesSearchResults = () => {
 		window.scrollTo(0, 0);
 	}, [page]);
 
-	const clothesScreen = 8;
+	const clothesScreen = 12;
 
 	const pagesTotal = Math.ceil(clothes.length / clothesScreen); //total de páginas
 

@@ -42,7 +42,7 @@ export const FilterScreen = () => {
 									<li
 										className="type__submenu-link"
 										onClick={() => {
-											gender && dispatch(filterClothesByType('polo', gender));
+											gender && dispatch(filterClothesByType('polos', gender));
 											gender || history.push('/search/polo');
 											localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
 											dispatch(resetPageState());
@@ -53,7 +53,8 @@ export const FilterScreen = () => {
 									<li
 										className="type__submenu-link"
 										onClick={() => {
-											gender && dispatch(filterClothesByType('sueter', gender));
+											gender &&
+												dispatch(filterClothesByType('sueteres', gender));
 											gender || history.push('/search/sueter');
 											localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
 											dispatch(resetPageState());
@@ -93,7 +94,7 @@ export const FilterScreen = () => {
 											className="type__submenu-link"
 											onClick={() => {
 												gender &&
-													dispatch(filterClothesByType('camisa', gender));
+													dispatch(filterClothesByType('camisas', gender));
 												gender || history.push('/search/camisa');
 												localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
 												dispatch(resetPageState());
@@ -121,7 +122,7 @@ export const FilterScreen = () => {
 												className="type__submenu-link"
 												onClick={() => {
 													gender &&
-														dispatch(filterClothesByType('camisa', gender));
+														dispatch(filterClothesByType('camisas', gender));
 													gender || history.push('/search/camisa');
 													localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
 													dispatch(resetPageState());

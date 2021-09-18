@@ -7,17 +7,17 @@
 
 	.footer__subtitle {
 		width: 100%;
-		padding-top: 4rem;
+		padding-top: 6rem;
 	}
 	.footer__sociales {
 		width: 100%;
 		display: flex;
 		justify-content: center;
-		margin-top: 1.5rem;
+		margin-top: 4rem;
 
 		.social-container {
-			width: 4rem;
-			height: 4rem;
+			width: 4.5rem;
+			height: 4.5rem;
 			background-color: green;
 			border-radius: 50%;
 			display: flex;
@@ -38,7 +38,7 @@
 	}
 	.footer__text-contain {
 		width: 100%;
-		margin-top: 2rem;
+		margin-top: 4rem;
 
 		.fa-lock {
 			font-size: 2rem;
@@ -52,7 +52,7 @@
 	.footer__contain-reserved {
 		width: 100%;
 		background-color: darken($color: $red-off, $amount: 16);
-		margin-top: 2rem;
+		margin-top: 4rem;
 
 		.footer__reserved {
 			padding-top: 1.5rem;

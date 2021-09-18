@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
 import { NavLogout } from './NavLogout';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterSearchMenu, resetPageState } from '../../actions/filter';
+import { getClothesByName } from '../../selectors/getClothesByName';
 
 export const Navbar = () => {
 	const [activeOpacity, setActiveOpacity] = useState(false);
@@ -18,6 +19,9 @@ export const Navbar = () => {
 
 	const [values, handleInputChange, reset] = useForm({ name: '' });
 	const { name } = values;
+
+	const guide = useMemo(() => getClothesByName(name), [name]);
+
 	//TODO: botón de scroll en la posición 0 de windows
 	/* 	window.scroll({
 		top: 100,
@@ -42,19 +46,19 @@ export const Navbar = () => {
 	const handleSubmitSearchForDesktop = () => {
 		//TODO: implementar una ayuda en el buscador
 		setBtnMenu(false);
-		setActiveOpacity(false);
+		setActiveOpacity(true);
 		reset();
 	};
 
 	const handleBtnMan = () => {
 		setBtnMenu(!btnMenu);
-		setActiveOpacity(!activeOpacity);
+		setActiveOpacity(false);
 		localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
 		dispatch(resetPageState());
 	};
 	const handleBtnWoman = () => {
 		setBtnMenu(!btnMenu);
-		setActiveOpacity(!activeOpacity);
+		setActiveOpacity(false);
 		localStorage.setItem('pageState', 1); //resetear el estado de la página al inicial 1
 		dispatch(resetPageState());
 	};
@@ -62,7 +66,7 @@ export const Navbar = () => {
 	const handleBtnSearch = () => {
 		setBtnSearch(!btnSearch);
 		setBtnMenu(false);
-		setActiveOpacity(!activeOpacity);
+		setActiveOpacity(true);
 		if (btnMenu) {
 			setActiveOpacity(true);
 		}
@@ -70,7 +74,7 @@ export const Navbar = () => {
 	const handleBtnMenu = () => {
 		setBtnMenu(!btnMenu);
 		setBtnSearch(false);
-		setActiveOpacity(!activeOpacity);
+		setActiveOpacity(true);
 		if (btnSearch) {
 			setActiveOpacity(true);
 		}
@@ -79,6 +83,7 @@ export const Navbar = () => {
 		setBtnMenu(false);
 		setBtnSearch(false);
 		setActiveOpacity(false);
+		reset();
 	};
 
 	const handleBtnLogo = () => {
@@ -116,6 +121,26 @@ export const Navbar = () => {
 							/>
 							<i className="fas fa-search" onClick={handleSubmitSearch}></i>
 						</div>
+						{guide.length !== 0 && (
+							<div className="search__guide-desktop">
+								<div className="guide__container-dektop">
+									{guide.map((clothes) => (
+										<div
+											onClick={() => {
+												history.push(`/details/${clothes.id}`);
+												setActiveOpacity(false);
+												setBtnSearch(false);
+												reset();
+											}}
+											className="guide__option-desktop"
+											key={clothes.id}
+										>
+											<span className="guide__option-link">{clothes.name}</span>
+										</div>
+									))}
+								</div>
+							</div>
+						)}
 					</form>
 
 					<button onClick={handleBtnSearch} className="nav__btn-search">
@@ -194,6 +219,27 @@ export const Navbar = () => {
 							onChange={handleInputChange}
 						/>
 					</div>
+
+					{guide.length !== 0 && (
+						<div className="nav__search-guide">
+							<div className="guide__container-options">
+								{guide.map((clothes) => (
+									<div
+										onClick={() => {
+											history.push(`/details/${clothes.id}`);
+											setActiveOpacity(false);
+											setBtnSearch(false);
+											reset();
+										}}
+										className="guide__option"
+										key={clothes.id}
+									>
+										{clothes.name}
+									</div>
+								))}
+							</div>
+						</div>
+					)}
 				</form>
 			</div>
 			<div
