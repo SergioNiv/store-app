@@ -52,7 +52,7 @@ export const ShoppingCartScreen = ({ history }) => {
 							</div>
 						) : (
 							<div className="cart__btn-container-desktop">
-								<button className="cart__btn-desktop">Ir a pagar</button>
+								<button className="cart__btn-desktop">Ir a pagar todo</button>
 							</div>
 						)}
 					</div>
@@ -76,7 +76,7 @@ export const ShoppingCartScreen = ({ history }) => {
 					</div>
 				) : (
 					<div className="cart__btn-container">
-						<button className="cart__btn">Ir a pagar</button>
+						<button className="cart__btn">Ir a pagar todo</button>
 					</div>
 				)}
 			</div>
