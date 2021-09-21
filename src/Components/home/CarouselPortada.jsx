@@ -1,12 +1,16 @@
 import React from 'react';
 import Carousel from 'nuka-carousel';
 import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { resetPageState } from '../../actions/filter';
 
 export const CarouselPortada = () => {
 	const history = useHistory();
 
+	const dispatch = useDispatch();
 	const handleClickFeatured = () => {
 		history.push(`/search/disney`);
+		dispatch(resetPageState());
 	};
 
 	const handleClickWoman = () => {
