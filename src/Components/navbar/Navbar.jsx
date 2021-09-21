@@ -74,7 +74,7 @@ export const Navbar = () => {
 	const handleBtnMenu = () => {
 		setBtnMenu(!btnMenu);
 		setBtnSearch(false);
-		setActiveOpacity(true);
+		setActiveOpacity(!activeOpacity);
 		if (btnSearch) {
 			setActiveOpacity(true);
 		}

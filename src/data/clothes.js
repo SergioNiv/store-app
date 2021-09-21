@@ -347,7 +347,7 @@ export const clothes = [
 
 	{
 		id: '016',
-		name: 'Sueter Manga Larga Hombre Blanco',
+		name: 'Sueter Manga Larga Hombre Café',
 		type: 'sueteres',
 		gender: 'hombre',
 		size: [
@@ -364,7 +364,7 @@ export const clothes = [
 			{
 				material: 'Algodón',
 				typec: 'Sueter',
-				color: 'Blanco',
+				color: 'Café',
 			},
 		],
 	},
@@ -688,6 +688,466 @@ export const clothes = [
 				material: 'Algodón',
 				typec: 'Polo',
 				color: 'Verde',
+			},
+		],
+	},
+	{
+		id: '031',
+		name: 'Blusa Mujer Cuello V Manga Larga Amarillo',
+		type: 'blusas',
+		gender: 'mujer',
+		size: [
+			{
+				S28: 1,
+				M30: 5,
+				L32: 10,
+				XL34: 12,
+				XXL36: 0,
+			},
+		],
+		price: 49.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Blusas',
+				color: 'Amarillo',
+			},
+		],
+	},
+	{
+		id: '032',
+		name: 'Blusa Mujer Manga Corta Amarillo',
+		type: 'blusas',
+		gender: 'mujer',
+		size: [
+			{
+				S28: 1,
+				M30: 5,
+				L32: 10,
+				XL34: 12,
+				XXL36: 0,
+			},
+		],
+		price: 49.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Blusas',
+				color: 'Amarillo',
+			},
+		],
+	},
+	{
+		id: '033',
+		name: 'Polo Manga Corta de Hombre Amarillo',
+		type: 'polos',
+		gender: 'hombre',
+		size: [
+			{
+				S28: 14,
+				M30: 8,
+				L32: 3,
+				XL34: 12,
+				XXL36: 12,
+			},
+		],
+		price: 29.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Polo',
+				color: 'Amarillo',
+			},
+		],
+	},
+	{
+		id: '034',
+		name: 'Polo Manga Corta de Hombre Amarillo',
+		type: 'polos',
+		gender: 'hombre',
+		size: [
+			{
+				S28: 12,
+				M30: 1,
+				L32: 9,
+				XL34: 2,
+				XXL36: 12,
+			},
+		],
+		price: 39.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Polo',
+				color: 'Amarillo',
+			},
+		],
+	},
+	{
+		id: '035',
+		name: 'Polo Mujer Campesino Amarillo',
+		type: 'polos',
+		gender: 'mujer',
+		size: [
+			{
+				S28: 1,
+				M30: 12,
+				L32: 1,
+				XL34: 2,
+				XXL36: 5,
+			},
+		],
+		price: 29.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Polo',
+				color: 'Amarillo',
+			},
+		],
+	},
+	{
+		id: '036',
+		name: 'Chompa Mujer Kuna Amarillo',
+		type: 'sueteres',
+		gender: 'mujer',
+		size: [
+			{
+				S28: 1,
+				M30: 12,
+				L32: 1,
+				XL34: 2,
+				XXL36: 5,
+			},
+		],
+		price: 49.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Sueter',
+				color: 'Amarillo',
+			},
+		],
+	},
+	{
+		id: '037',
+		name: 'Chompa Mujer Kuna Alpaca Amarillo',
+		type: 'sueteres',
+		gender: 'mujer',
+		size: [
+			{
+				S28: 1,
+				M30: 12,
+				L32: 1,
+				XL34: 2,
+				XXL36: 5,
+			},
+		],
+		price: 49.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Sueter',
+				color: 'Amarillo',
+			},
+		],
+	},
+	{
+		id: '038',
+		name: 'Casaca Sueter Mujer Café',
+		type: 'sueteres',
+		gender: 'mujer',
+		size: [
+			{
+				S28: 9,
+				M30: 18,
+				L32: 6,
+				XL34: 4,
+				XXL36: 8,
+			},
+		],
+		price: 89.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Sueter',
+				color: 'Café',
+			},
+		],
+	},
+	{
+		id: '039',
+		name: 'Chompa Sueter Mujer Piel Manga Larga',
+		type: 'sueteres',
+		gender: 'mujer',
+		size: [
+			{
+				S28: 9,
+				M30: 11,
+				L32: 10,
+				XL34: 2,
+				XXL36: 8,
+			},
+		],
+		price: 69.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Sueter',
+				color: 'Piel',
+			},
+		],
+	},
+	{
+		id: '040',
+		name: 'Pantanlón Buzo Velvet Mujer Verde ',
+		type: 'pantalones',
+		gender: 'mujer',
+		size: [
+			{
+				S28: 9,
+				M30: 11,
+				L32: 10,
+				XL34: 2,
+				XXL36: 8,
+			},
+		],
+		price: 79.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Pantalones',
+				color: 'Verde',
+			},
+		],
+	},
+	{
+		id: '041',
+		name: 'Pantanlón Lazo Mujer Verde ',
+		type: 'pantalones',
+		gender: 'mujer',
+		size: [
+			{
+				S28: 9,
+				M30: 19,
+				L32: 11,
+				XL34: 1,
+				XXL36: 5,
+			},
+		],
+		price: 69.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Pantalones',
+				color: 'Verde',
+			},
+		],
+	},
+	{
+		id: '042',
+		name: 'Polo Corte Mujer Rojo',
+		type: 'polos',
+		gender: 'mujer',
+		size: [
+			{
+				S28: 1,
+				M30: 11,
+				L32: 11,
+				XL34: 2,
+				XXL36: 5,
+			},
+		],
+		price: 39.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Polos',
+				color: 'Rojo',
+			},
+		],
+	},
+	{
+		id: '043',
+		name: 'Polo Encaje Rojo Mujer',
+		type: 'polos',
+		gender: 'mujer',
+		size: [
+			{
+				S28: 4,
+				M30: 12,
+				L32: 11,
+				XL34: 8,
+				XXL36: 12,
+			},
+		],
+		price: 29.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Polos',
+				color: 'Rojo',
+			},
+		],
+	},
+	{
+		id: '044',
+		name: 'Sueter Mujer Piel Manga Larga',
+		type: 'sueteres',
+		gender: 'mujer',
+		size: [
+			{
+				S28: 4,
+				M30: 12,
+				L32: 11,
+				XL34: 8,
+				XXL36: 12,
+			},
+		],
+		price: 59.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Sueter',
+				color: 'Piel',
+			},
+		],
+	},
+	{
+		id: '045',
+		name: 'Polo Manga Larga Hombre Negro',
+		type: 'polos',
+		gender: 'hombre',
+		size: [
+			{
+				S28: 4,
+				M30: 14,
+				L32: 10,
+				XL34: 2,
+				XXL36: 0,
+			},
+		],
+		price: 29.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Polo',
+				color: 'Negro',
+			},
+		],
+	},
+	{
+		id: '046',
+		name: 'Polo Manga Corta Hombre Blanco',
+		type: 'polos',
+		gender: 'hombre',
+		size: [
+			{
+				S28: 4,
+				M30: 14,
+				L32: 10,
+				XL34: 2,
+				XXL36: 0,
+			},
+		],
+		price: 34.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Polo',
+				color: 'Blanco',
+			},
+		],
+	},
+	{
+		id: '047',
+		name: 'Polo Manga Corta Hombre Blanco',
+		type: 'polos',
+		gender: 'hombre',
+		size: [
+			{
+				S28: 4,
+				M30: 4,
+				L32: 4,
+				XL34: 2,
+				XXL36: 0,
+			},
+		],
+		price: 29.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Polo',
+				color: 'Blanco',
+			},
+		],
+	},
+	{
+		id: '048',
+		name: 'Camisa Manga Larga Hombre Rojo',
+		type: 'camisas',
+		gender: 'hombre',
+		size: [
+			{
+				S28: 4,
+				M30: 4,
+				L32: 4,
+				XL34: 2,
+				XXL36: 0,
+			},
+		],
+		price: 49.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Camisa',
+				color: 'Rojo',
+			},
+		],
+	},
+	{
+		id: '049',
+		name: 'Camisa Manga Larga Hombre Azul',
+		type: 'camisas',
+		gender: 'hombre',
+		size: [
+			{
+				S28: 6,
+				M30: 2,
+				L32: 8,
+				XL34: 6,
+				XXL36: 0,
+			},
+		],
+		price: 49.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Camisa',
+				color: 'Azul',
+			},
+		],
+	},
+	{
+		id: '050',
+		name: 'Camisa Manga Larga Hombre Piel',
+		type: 'camisas',
+		gender: 'hombre',
+		size: [
+			{
+				S28: 6,
+				M30: 2,
+				L32: 8,
+				XL34: 6,
+				XXL36: 0,
+			},
+		],
+		price: 59.9,
+		characters: [
+			{
+				material: 'Algodón',
+				typec: 'Camisa',
+				color: 'Piel',
 			},
 		],
 	},

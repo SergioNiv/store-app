@@ -76,18 +76,18 @@
 	}
 }
 @media (min-width: 360px) {
-	.grid__container {
+	.grid {
 		grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
 	}
 }
 
 @media (min-width: 500px) {
-	.grid__container {
+	.grid {
 		grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
 	}
 }
 @media (min-width: 750px) {
-	.grid__container {
+	.grid {
 		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 	}
 }
@@ -101,8 +101,5 @@
 	}
 	.container__grid_list {
 		width: 80%;
-	}
-	.grid {
-		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 	}
 }
