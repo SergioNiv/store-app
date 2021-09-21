@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { modifyPriceTotal } from '../../actions/cart';
 import { ItemCart } from './ItemCart';
+import { ShoppingModal } from './ShoppingModal';
 
 export const ShoppingCartScreen = ({ history }) => {
 	const { cartItems, totalPrice } = useSelector((state) => state.cart);
 	const dispatch = useDispatch();
 	const sumarItems = cartItems.reduce((sum, value) => sum + value.items, 0);
+
+	const [isOpen, setIsOpen] = useState(false);
 
 	useEffect(() => {
 		window.scrollTo(0, 0); //desplazar a la parte superior del DOM al hacer render
@@ -52,7 +55,13 @@ export const ShoppingCartScreen = ({ history }) => {
 							</div>
 						) : (
 							<div className="cart__btn-container-desktop">
-								<button className="cart__btn-desktop">Ir a pagar todo</button>
+								<button
+									className="cart__btn-desktop"
+									onClick={() => setIsOpen(!isOpen)}
+								>
+									Ir a pagar
+								</button>
+								<ShoppingModal openModal={isOpen} setIsOpen={setIsOpen} />
 							</div>
 						)}
 					</div>

@@ -39,6 +39,12 @@
 	outline: none;
 	padding: 10px;
 
+	.modal-Paypal {
+		width: 100%;
+		max-height: 600px;
+		overflow-y: scroll;
+	}
+
 	.modal__title {
 		padding-top: 1rem;
 		font-size: 1.5rem;
